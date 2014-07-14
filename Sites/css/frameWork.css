@@ -1,0 +1,107 @@
+/*--------------------------------------------------------
+					header 
+-------------------------------------------------------------*/
+#header h1 {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	line-height: 65px;
+	font-size: 22px;
+	background-color: #55b8f1;
+}
+ .upload {
+	position: absolute;
+	right: 40px;
+	top: 23px;
+	font-size: 13px;
+	line-height: 20px; 
+	padding-left: 8px;
+	padding-right: 8px;
+	border: 1px solid #fff;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+}
+/*----------------------------------------------------------
+                 Content
+------------------------------------------------------------*/
+#mainContent {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+#mainContent ul li {
+	height: 80px;
+	border-bottom: 1px solid #dadada;
+}
+/*---------------------------------------------------------
+				footer
+----------------------------------------------------------*/
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 65px;
+	font-size: 12px;
+	margin-top: 55px;
+	background: url(../images/border_bottom.png) top repeat-x #fff;
+}
+footer ul li {
+	margin-top: 8px;
+	height: 65px;
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+footer ul li a{
+	height: 65px;
+	position: relative;
+	top: 40px;
+	display: block;
+	color: #b8b8b8;
+}
+footer ul li a img {
+	position: absolute;
+	top:-35px;
+	left: 33%;
+}
+/*------------------------------------------------------
+				function(下载，删除等弹框)
+----------------------------------------------------------*/
+#function {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 65px;
+	font-size: 12px;
+	margin-top: 55px;
+	border-top: 1px solid #55b8f1;
+	background-color: #fff;
+}
+#function ul li {
+	height: 65px;
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+#function ul li a{
+	height: 65px;
+	position: relative;
+	top: 40px;
+	display: block;
+	color: #b8b8b8;
+}
+#function ul li a img {
+	position: absolute;
+	top:-32px;
+	left: 34%;
+}
+/*--------------footer 点击效果--------------*/
+footer ul li:active {
+	background-color: #55b8f1;
+}
+#function ul li:active {
+	background-color: #55b8f1;
+}
+/*------------------------------------------------*/
