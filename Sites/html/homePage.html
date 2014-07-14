@@ -9,9 +9,11 @@
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="../css/homePage.css">
 	<link rel="stylesheet" href="../css/reset.css">
-	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.mobile-1.3.2.min.js"></script>
 	<script src="../js/min_height.js"></script>
+	<script src="../js/touch.js"></script>
 </head>
 <body>
 	<div data-role="page" id='homePage'>
@@ -23,10 +25,10 @@
 				<input type="text" placeholder="搜索我的文件">
 				<img src="../images/search1.png">
 			</form>
-			<ul data-role="listview">
-				<li>
+			<ul >
+				<li class="clearfix">
 					<a href="" class="clearfix">
-						<img src="../images/homePage_doc.png" height="42" width="38">
+						<img class="icon" src="../images/homePage_doc.png" height="42" width="38">
 						<div class="rightContent">
 							<div class="name">舌尖上的中国.txt</div>
 							<div class="sizeAndDate">
@@ -35,10 +37,13 @@
 							</div>	
 						</div>
 					</a>
+					<div class="func_icon" >
+							<img src="../images/homePage_li_bg.png" >
+						</div>
 				</li>
-				<li>
+				<li class="clearfix">
 					<a href="" class="clearfix">
-						<img src="../images/homePage_music.png" height="42" width="38">
+						<img class="icon" src="../images/homePage_music.png" height="42" width="38">
 						<div class="rightContent">
 							<div class="name">不要说话.mp3</div>
 							<div class="sizeAndDate">
@@ -47,34 +52,43 @@
 							</div>	
 						</div>
 					</a>
+					<div class="func_icon" >
+							<img src="../images/homePage_li_bg.png">
+						</div>
 				</li>
-				<li>
+				<li class="clearfix">
 					<a href="" class="clearfix">
-						<img src="../images/homePage_pic.png" height="42" width="38">
+						<img class="icon" src="../images/homePage_pic.png" height="42" width="38">
 						<div class="rightContent">
 							<div class="name">图片.png</div>
 							<div class="sizeAndDate">
-								<span class="size">456K</span>
+								<span class="size">586K</span>
 								<span class="date">2014-07-10 15:20</span>
 							</div>	
 						</div>
 					</a>
+					<div class="func_icon" >
+							<img src="../images/homePage_li_bg.png">
+						</div>
 				</li>
-				<li>
+				<li class="clearfix">
 					<a href="" class="clearfix">
-						<img src="../images/homePage_video.png" height="42" width="38">
+						<img class="icon" src="../images/homePage_video.png" height="42" width="38">
 						<div class="rightContent">
 							<div class="name">神探夏洛克.rmvb</div>
 							<div class="sizeAndDate">
-								<span class="size">23M</span>
+								<span class="size">586K</span>
 								<span class="date">2014-07-10 15:20</span>
 							</div>	
 						</div>
 					</a>
+					<div class="func_icon" >
+							<img src="../images/homePage_li_bg.png">
+						</div>
 				</li>
-				<li>
+				<li class="clearfix">
 					<a href="" class="clearfix">
-						<img src="../images/homePage_floder.png" height="42" width="38">
+						<img class="icon" src="../images/homePage_floder.png" height="42" width="38">
 						<div class="rightContent">
 							<div class="name">文件夹</div>
 							<div class="sizeAndDate">
@@ -83,6 +97,9 @@
 							</div>	
 						</div>
 					</a>
+					<div class="func_icon" >
+							<img src="../images/homePage_li_bg.png">
+						</div>
 				</li>
 			</ul>
 		</div>
@@ -94,5 +111,15 @@
 				<li><a href="">设置<img src="../images/bottom_button4.png" width="25" height="25"></a></li>
 			</ul>
 		</footer>
+		<div id="function">
+			<ul class="clearfix">
+				<li><a href="">下载<img src="../images/function_icon1.png"></a></li>
+				<li><a href="">复制<img src="../images/function_icon2.png"></a></li>
+				<li><a href="">移动<img src="../images/function_icon3.png"></a></li>
+				<li><a href="">重命名<img src="../images/function_icon4.png"></a></li>
+				<li><a href="">删除<img src="../images/function_icon5.png"></a></li>
+			</ul>
+		</div>
 	</div>
 </body>
+</html>
