@@ -1,7 +1,7 @@
 /*--------------------------------------------------------
 					header 
 -------------------------------------------------------------*/
-#header h1 {
+#header {
 	position: relative;
 	width: 100%;
 	text-align: center;
@@ -9,6 +9,10 @@
 	line-height: 65px;
 	font-size: 22px;
 	background-color: #55b8f1;
+}
+#header h1 {
+	width: 20%;
+	margin: 0 auto;
 }
  .upload {
 	position: absolute;
@@ -102,6 +106,9 @@ footer ul li:active {
 	background-color: #55b8f1;
 }
 #function ul li:active {
+	background-color: #55b8f1;
+}
+ul#classification li:active {
 	background-color: #55b8f1;
 }
 /*------------------------------------------------*/

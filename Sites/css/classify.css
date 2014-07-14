@@ -1,0 +1,32 @@
+#classification {
+/*	position: fixed;
+	top: 65px;*/
+	width: 100%;
+	height: 75px;
+	font-size: 12px;
+	background: url(../images/border_top.png) bottom repeat-x;
+}
+ul#classification li {
+	height: 75px;
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+ul#classification li a {
+	position: relative;
+	display: block;
+	height: 75px;
+	top: 50px;
+	color: #b8b8b8;
+}
+ul#classification li a img {
+	position: absolute;
+	top:-40px;
+	left: 22%;
+}
+ul#classification li a img#shipin {
+	top: -45px;
+} /*截图问题微调*/
+ul#classification li a img#yinyue {
+	left: 16%;
+}

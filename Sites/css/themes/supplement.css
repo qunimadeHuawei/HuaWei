@@ -1,0 +1,87 @@
+body {
+	font-family: "微软雅黑";
+}
+/*------------------------------------------------------------
+				  header
+-------------------------------------------------------------*/
+#header {
+	height: 60px;
+}
+#header h1 {
+	font-size: 22px;
+	font-weight: normal;
+	text-shadow: none; /*控制标题没有阴影*/
+}
+/*---------------------------------------------------------
+					mainContent
+--------------------------------------------------------------*/
+#mainContent ul li a {
+	padding-top: 17px;
+}
+#mainContent ul li a.floder {
+	line-height: 48px;
+}
+.ui-listview .ui-li-has-thumb>img:first-child, .ui-listview .ui-li-has-thumb>.ui-btn>img:first-child, .ui-listview .ui-li-has-thumb .ui-li-thumb {
+position: absolute;
+left: 20px;
+top: 20px;
+max-height: 5em;
+max-width: 5em;
+} /*控制li左边img的位置*/
+.ui-btn-icon-right:after {
+right: 1em;
+} /*控制背景图标位置*/
+/*--------------------------------------------------------------
+					footer
+---------------------------------------------------------------*/
+#footer {
+	padding-top: 8px;
+	border: none;/*取消border（我设置的默认有border）*/
+	background: url(../../images/border_bottom.png) top repeat-x;
+}
+.ui-icon-home:after {
+background-image: none; /*取消nav 的默认背景图片*/
+}
+.mulu:after {
+	background-image: url(../../images/bottom_button1.png);
+}
+.fenlei:after {
+	background-image: url(../../images/bottom_button2.png);
+}
+.chuanshuliebiao:after {
+	background-image: url(../../images/bottom_button3.png);
+}
+.shezhi:after {
+	background-image: url(../../images/bottom_button4.png);
+}
+/*------------------------------------------------------
+				function(下载，删除等弹框)
+----------------------------------------------------------*/
+#function {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 65px;
+	font-size: 12px;
+	margin-top: 55px;
+	border-top: 1px solid #55b8f1;
+	background-color: #fff;
+}
+#function ul li {
+	height: 65px;
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+#function ul li a{
+	height: 65px;
+	position: relative;
+	top: 40px;
+	display: block;
+	color: #b8b8b8;
+}
+#function ul li a img {
+	position: absolute;
+	top:-32px;
+	left: 34%;
+}
