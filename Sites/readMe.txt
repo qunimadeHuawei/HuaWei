@@ -13,4 +13,4 @@ header和footer的框架已分离出来。
   页面用jqueryMobile写成;
   添加了supplement.css用来补充和修改jqueryMobile的自定义css(主题)和自己       通过jqueryMobile制作的主题;
   min-height.js控制页面最小高度
-  taphold.js控制点击ul li a后弹出#function框(删除、复制、移动等)的效果
+  taphold.js控制点击ul li a后弹出#function框(删除、复制、移动等)的效果。。
