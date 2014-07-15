@@ -1,129 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>华为网盘</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="../css/frameWork.css">
-	<link rel="stylesheet" href="../css/homePage.css">
-	<link rel="stylesheet" href="../css/reset.css">
-	<script src="../js/jquery.js"></script>
-	<script src="../js/jquery-1.8.3.min.js"></script>
-<script src="../js/jquery.mobile-1.3.2.min.js"></script>
-	<script src="../js/min_height.js"></script>
-	<script src="../js/touch.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/themes/header.min.css">
+  <link rel="stylesheet" href="../css/themes/jquery.mobile.icons.min.css">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />
+<link rel="stylesheet" href="../css/themes/supplement.css">
+<script src="../js/jquery.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+<script src="../js/min_height.js"></script>
+<script src="../js/taphold.js"></script>
+<script type="text/javascript">
+    function showFileName()
+      {
+        var file = document.getElementById("upload");
+        for(var i = 0, j = file.files.length; i < j; i++)
+            {
+               alert(file.files[i].name);
+                            };
+            };
+            </script>
 </head>
 <body>
-	<div data-role="page" id='homePage'>
-		<div data-role="header" id="header">
-			<h1>华为网盘 <div class="upload">上传</div></h1>
-		</div>
-<!--    华为网盘头部    end here    -->
-		<div data-role="content" id="mainContent">
-			<form class="clearfix">
-				<input type="text" placeholder="搜索我的文件">
-				<img src="../images/search1.png">
-			</form>
-			<ul >
-				<li class="clearfix">
-					<a href="" class="clearfix">
-						<img class="icon" src="../images/homePage_doc.png" height="42" width="38">
-						<div class="rightContent">
-							<div class="name">舌尖上的中国.txt</div>
-							<div class="sizeAndDate">
-								<span class="size">586K</span>
-								<span class="date">2014-07-10 15:20</span>
-							</div>	
-						</div>
-					</a>
-					<div class="func_icon" >
-							<img src="../images/homePage_li_bg.png" >
-						</div>
-				</li>
-				<li class="clearfix">
-					<a href="" class="clearfix">
-						<img class="icon" src="../images/homePage_music.png" height="42" width="38">
-						<div class="rightContent">
-							<div class="name">不要说话.mp3</div>
-							<div class="sizeAndDate">
-								<span class="size">586K</span>
-								<span class="date">2014-07-10 15:20</span>
-							</div>	
-						</div>
-					</a>
-					<div class="func_icon" >
-							<img src="../images/homePage_li_bg.png">
-						</div>
-				</li>
-				<li class="clearfix">
-					<a href="" class="clearfix">
-						<img class="icon" src="../images/homePage_pic.png" height="42" width="38">
-						<div class="rightContent">
-							<div class="name">图片.png</div>
-							<div class="sizeAndDate">
-								<span class="size">586K</span>
-								<span class="date">2014-07-10 15:20</span>
-							</div>	
-						</div>
-					</a>
-					<div class="func_icon" >
-							<img src="../images/homePage_li_bg.png">
-						</div>
-				</li>
-				<li class="clearfix">
-					<a href="" class="clearfix">
-						<img class="icon" src="../images/homePage_video.png" height="42" width="38">
-						<div class="rightContent">
-							<div class="name">神探夏洛克.rmvb</div>
-							<div class="sizeAndDate">
-								<span class="size">586K</span>
-								<span class="date">2014-07-10 15:20</span>
-							</div>	
-						</div>
-					</a>
-					<div class="func_icon" >
-							<img src="../images/homePage_li_bg.png">
-						</div>
-				</li>
-				<li class="clearfix">
-					<a href="" class="clearfix">
-						<img class="icon" src="../images/homePage_floder.png" height="42" width="38">
-						<div class="rightContent">
-							<div class="name">文件夹</div>
-							<div class="sizeAndDate">
-								<span class="size">586K</span>
-								<span class="date">2014-07-10 15:20</span>
-							</div>	
-						</div>
-					</a>
-					<div class="func_icon" >
-							<img src="../images/homePage_li_bg.png">
-						</div>
-				</li>
-			</ul>
-		</div>
-<!-- footer starts here -->
-		<footer>
-			<ul class="clearfix">
-				<li><a href="">目录<img src="../images/bottom_button1.png "width="25" height="25"></a></li>
-				<li><a href="">分类<img src="../images/bottom_button2.png" width="25" height="25"></a></li>
-				<li><a href="">传输列表<img src="../images/bottom_button3.png" width="25" height="25"></a></li>
-				<li><a href="">设置<img src="../images/bottom_button4.png" width="25" height="25"></a></li>
-			</ul>
-		</footer>
-		<div id="function">
-			<ul class="clearfix">
-				<li><a href="">下载<img src="../images/function_icon1.png"></a></li>
-				<li><a href="">复制<img src="../images/function_icon2.png"></a></li>
-				<li><a href="">移动<img src="../images/function_icon3.png"></a></li>
-				<li><a href="">重命名<img src="../images/function_icon4.png"></a></li>
-				<li><a href="">删除<img src="../images/function_icon5.png"></a></li>
-			</ul>
-		</div>
-<!--     footer ends here   -->
-	</div>
+
+<div data-role="page" id="homePage" >
+  <div data-role="header" data-position="fixed" id="header">
+    <h1>华为网盘</h1>
+    <form>
+      <input id="upload" type="file" method="post" enctype="multipart/form-data" value="上传">
+      <input class="tap" type="button" value="上传" data-inline="true" data-mini="true">
+    </form>
+  </div>
+<!--header ends here  -->
+
+<!-- mainContent starts here  -->
+  <div data-role="content" id="mainContent">
+    <ul data-role="listview" data-filter="true" data-filter-placeholder="搜索我的文件">
+      <li><a href="#"><img src="../images/homePage1_doc.png" width="38" height="42"><h2>舌尖上的中国.txt</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li>
+      <li><a href="#"><img src="../images/homePage1_pic.png" width="38" height="42"><h2>春光.png</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li>
+      <li><a href="#"><img src="../images/homePage1_video.png" width="38" height="42"><h2>神探夏洛克.rmvb</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li>
+      <li><a href="#"><img src="../images/homePage1_music.png" width="38" height="42"><h2>不要说话.mp3</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li>
+      <li><a href="#" class="floder"><img src="../images/homePage1_floder.png" width="38" height="42">新建文件夹</a></li>
+    </ul> 
+  </div>
+<!--  mainContent ends here   -->
+
+<!--    footer starts here   -->
+  <div data-role="footer" data-position="fixed" id="footer">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#" data-icon="home" class="mulu">目录</a></li>
+        <li><a href="#" data-icon="home" class="fenlei">分类</a></li>
+        <li><a href="#" data-icon="home" class="chuanshuliebiao">传输列表</a></li>
+        <li><a href="#" data-icon="home" class="shezhi">设置</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="function">
+      <ul class="clearfix">
+        <li><a href="">下载<img src="../images/function_icon1.png"></a></li>
+        <li><a href="">复制<img src="../images/function_icon2.png"></a></li>
+        <li><a href="">移动<img src="../images/function_icon3.png"></a></li>
+        <li><a href="">重命名<img src="../images/function_icon4.png"></a></li>
+        <li><a href="">删除<img src="../images/function_icon5.png"></a></li>
+      </ul>
+    </div>
+</div> 
+<!--    footer ends here  -->
+
 </body>
 </html>
