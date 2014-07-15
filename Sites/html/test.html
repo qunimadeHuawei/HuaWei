@@ -13,12 +13,26 @@
 <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 <script src="../js/min_height.js"></script>
 <script src="../js/taphold.js"></script>
+<script type="text/javascript">
+    function showFileName()
+      {
+        var file = document.getElementById("upload");
+        for(var i = 0, j = file.files.length; i < j; i++)
+            {
+               alert(file.files[i].name);
+                            };
+            };
+            </script>
 </head>
 <body>
 
 <div data-role="page" id="homePage" >
   <div data-role="header" data-position="fixed" id="header">
     <h1>华为网盘</h1>
+    <form>
+      <input id="upload" type="file" method="post" enctype="multipart/form-data" value="上传">
+      <input class="tap" type="button" value="上传" data-inline="true" data-mini="true">
+    </form>
   </div>
 <!--header ends here  -->
 

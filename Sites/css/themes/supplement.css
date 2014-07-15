@@ -12,6 +12,11 @@ body {
 	font-weight: normal;
 	text-shadow: none; /*控制标题没有阴影*/
 }
+#header form  {
+	position: absolute;
+	right: 13px;
+	top:-13px;
+}
 /*---------------------------------------------------------
 					mainContent
 --------------------------------------------------------------*/
@@ -84,4 +89,7 @@ background-image: none; /*取消nav 的默认背景图片*/
 	position: absolute;
 	top:-32px;
 	left: 34%;
+}
+#function ul li:active {
+	background-color: #55b8f1;
 }
