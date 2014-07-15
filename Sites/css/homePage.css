@@ -19,6 +19,7 @@
 #mainContent ul li {
 	height: 80px;
 	border-bottom: 1px solid #dadada;
+	border-top: 1px solid #dadada;
 }
 #mainContent ul li a  {
 	float: left;
@@ -45,4 +46,7 @@
 	float: right;
 	width: 25px;
 	margin-top: 32px;
+}
+#mainContent{
+	background-repeat:repeat-x;
 }
