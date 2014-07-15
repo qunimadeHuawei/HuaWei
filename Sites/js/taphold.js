@@ -1,4 +1,4 @@
-$(document).on("pageinit","#homePage",function(){
+$(document).on("pageinit",".allPage",function(){
 	var count=0;
 	$("#function").hide();
 	$("#mainContent ul li a").on("taphold",function(){
