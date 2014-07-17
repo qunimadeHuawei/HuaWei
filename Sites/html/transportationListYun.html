@@ -26,19 +26,19 @@
 </head>
 <body>
 
-<div data-role="page" id="homepage" >
+<div data-role="page" id="transportationListYun" class="allPage">
   <div data-role="header" data-position="fixed" id="header">
     <h1>传输列表</h1>
     <form>
       <input id="upload" type="file" method="post" enctype="multipart/form-data" value="上传">
-     
+      <input class="tap" type="button" value="上传" data-inline="true" data-mini="true">
     </form>
     
-     <div data-role="navbar" style="background:url(../images/border_top.png) bottom repeat-x;padding-bottom:6px;">
+     <div data-role="navbar" style="background:url(../images/border_top.png) bottom repeat-x;padding-bottom:10px;">
       <ul>
-        <li><a href="#" >上传列表</a></li>
-        <li><a href="#" >保存到云</a></li>
-        <li><a href="#" >下载列表</a></li>
+        <li><a href="transportationListDelete.html" data-transition="slide" data-direction="reverse" class="ui-state-persist">上传列表</a></li>
+        <li><a href="transportationListYun.html" class="ui-btn-active ui-state-persist">保存到云</a></li>
+        <li><a href="transportationListDelete.html" data-transition="slide" class="ui-state-persist">下载列表</a></li>
       </ul>
   </div>
   <div>
