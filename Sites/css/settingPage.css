@@ -1,14 +1,27 @@
 
 
 #mainContent ul li {
-	font-size:16px;
-	height: 65px;
-	border-bottom: 2px solid #f1f2f3;
-	border-top: 2px solid #f1f2f3;
-	border-left: 2px solid #f1f2f3;
-	border-right: 2px solid #f1f2f3;
-	margin:1px;
+	
+	
+	height: 52px;
+	border-bottom: 1px solid #dcdcdc;
+	border-top: 1px solid #dcdcdc;
+	border-left: 1px solid #dcdcdc;
+	border-right: 1px solid #dcdcdc;
+	padding-bottom:1px;
+	margin-left:-4px;
+	margin-right:-2px;
 }
 #mainContent ul  {
 	margin:5px;
+}
+#wifi{
+	margin-bottom: 0px;
+	padding-top:7px; 
+	padding-bottom: 8px;
+	border-bottom: 1px solid #dcdcdc;
+	border-top: 1px solid #dcdcdc;
+	border-left: 1px solid #dcdcdc;
+	border-right: 1px solid #dcdcdc;
+	
 }
