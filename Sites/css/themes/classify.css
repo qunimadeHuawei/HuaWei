@@ -1,0 +1,58 @@
+/*-------------------------------------------------------------------
+				标注当前所在页面
+-----------------------------------------------------------------*/
+#doc li#docLink,#pic li#picLink,
+#music li#musicLink,#video li#videoLink,
+#others li#othersLink {
+	background-color:  #d6f4ea;
+}
+/*后台需将对应的data-role="page"处的ID换掉*/
+
+
+
+
+
+/*------------------------------------------------------------
+			文档、图片等
+-------------------------------------------------------------*/
+#header {
+	height: 120px;
+}/*头部加入了分类部分*/
+#classification {
+	position: fixed;
+	width: 100%;
+	padding-bottom: 6px;
+	height: 65px;
+	font-size: 12px;
+	border-top: 1px solid #55b8f1;
+	background: url(../../images/border_top.png) bottom repeat-x #fff;
+}
+#classification ul li {
+	height: 65px;
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+#classification ul li a{
+	height: 65px;
+	position: relative;
+	top: 46px;
+	display: block;
+	color: #b8b8b8;
+}
+#classification ul li a img {
+	position: absolute;
+	top:-40px;
+	left: 20%;
+}
+#classification ul li:active {
+	background-color: #55b8f1;
+}
+/*---------------------------------------------------------*/
+/*微调分类部分图片*/
+#classification .shipin {
+	top: -45px;
+}
+#classification .qita {
+	left: 25%;
+}

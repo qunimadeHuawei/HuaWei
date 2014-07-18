@@ -25,6 +25,5 @@ function showFileName()
                alert(file.files[i].name);
                             };
             };
-	$("#header form input#upload").hide();
-	$("#header input.tap").on("tap",showFileName());
+	$("#header #upload").hide();
 });

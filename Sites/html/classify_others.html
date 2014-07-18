@@ -8,11 +8,12 @@
   <link rel="stylesheet" href="../css/themes/jquery.mobile.icons.min.css">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />
 <link rel="stylesheet" href="../css/themes/supplement.css">
+<link rel="stylesheet" href="../css/themes/classify.css">
 <script src="../js/jquery.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 <script src="../js/min_height.js"></script>
-<script src="../js/taphold.js"></script>
+<script src="../js/taphold.js"></script> 
 <script type="text/javascript">
     function showFileName()
       {
@@ -26,37 +27,26 @@
 </head>
 <body>
 
-<div data-role="page" id="transportationListDelete" class="allPage" >
+<div data-role="page" id="others" class="allPage">
   <div data-role="header" data-position="fixed" id="header">
-    <h1>传输列表</h1>
-    <form>
-      <input id="upload" type="file" method="post" enctype="multipart/form-data" value="全选">
-      <input class="tap" type="button" value="全选" data-inline="true" data-mini="true">
-    </form>
-    
-    <div data-role="navbar" style="background:url(../images/border_top.png) bottom repeat-x;padding-bottom:6px;">
-      <ul>
-        <li><a href="transportationListDelete.html" data-transition="slide" data-direction="reverse"上传列表</a></li>
-        <li><a href="transportationListYun.html">保存到云</a></li>
-        <li><a href="transportationListDelete.html" data-transition="slide" >下载列表</a></li>
+    <h1>分类</h1>
+    <div id="classification">
+      <ul class="clearfix">
+        <li id="docLink"><a href="classify_doc.html" data-transition="slide" data-direction="reverse">文档<img src="../images/classify_doc.png"></a></li>
+        <li id="picLink"><a href="classify_pic.html">图片<img src="../images/classify_pic.png"></a></li>
+        <li id="musicLink"><a href="classify_music.html">音乐<img src="../images/classify_music.png"></a></li>
+        <li id="videoLink"><a href="classify_video.html">视频<img class="shipin" src="../images/classify_video.png"></a></li>
+        <li id="othersLink"><a href="classify_others.html" data-transition="slide">其他<img class="qita" src="../images/classify_others.png"></a></li>
       </ul>
-    </div>
+  </div>
   </div>
 <!--header ends here  -->
 
 <!-- mainContent starts here  -->
   <div data-role="content" id="mainContent">
-    <div style="background-color:#e2e3e2;margin-top:30px;"><p id="">上传完成（xx）</p></div><br/>
-     <ul data-role="listview">
-      <li><a href="#"><img src="../images/homePage1_doc.png" width="38" height="42"><h2>舌尖上的中国.txt</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li>
-      <li><a href="#"><img src="../images/homePage1_pic.png" width="38" height="42"><h2>春光.png</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li>
-      <li><a href="#"><img src="../images/homePage1_video.png" width="38" height="42"><h2>神探夏洛克.rmvb</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li>
-      <li><a href="#"><img src="../images/homePage1_music.png" width="38" height="42"><h2>不要说话.mp3</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li>
+    <ul data-role="listview" data-filter="true" data-filter-placeholder="搜索我的文件">
       <li><a href="#" class="floder"><img src="../images/homePage1_floder.png" width="38" height="42">新建文件夹</a></li>
-    </ul>
-      
-    
-    
+    <ul>
   </div>
 <!--  mainContent ends here   -->
 
@@ -73,10 +63,15 @@
   </div>
   <div id="function">
       <ul class="clearfix">
+        <li><a href="">下载<img src="../images/function_icon1.png"></a></li>
+        <li><a href="">复制<img src="../images/function_icon2.png"></a></li>
+        <li><a href="">移动<img src="../images/function_icon3.png"></a></li>
+        <li><a href="">重命名<img src="../images/function_icon4.png"></a></li>
         <li><a href="">删除<img src="../images/function_icon5.png"></a></li>
       </ul>
-    </div>
+  </div>
 </div> 
 <!--    footer ends here  -->
+
 </body>
-<html>
+</html>
