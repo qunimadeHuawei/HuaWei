@@ -19,7 +19,6 @@
 #mainContent ul li {
 	height: 80px;
 	border-bottom: 1px solid #dadada;
-	border-top: 1px solid #dadada;
 }
 #mainContent ul li a  {
 	float: left;
