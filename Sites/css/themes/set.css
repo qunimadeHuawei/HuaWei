@@ -1,0 +1,64 @@
+#set .top {
+	margin-bottom: 55px;
+}
+#set .account {
+	padding: 15px;
+	border: 1px solid #f1f2f3;
+}
+#set .account_left {
+	float: left;
+	width: 70%;
+}
+#set .account_right {
+	float: right;
+	font-size: 13px;
+	padding: 8px;
+	padding-bottom: 4px;
+	padding-top: 4px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	background-color: #55b8f1;
+	text-shadow: none;
+}/*华为账号  end here */
+.top .capacity {
+	padding: 15px;
+	border: 1px solid #f1f2f3;
+}
+.top .showInImg {
+	height: 8px;
+	width: 100%;
+	margin-top: 10px;
+	background-color: #f1f2f3;
+}
+.top .blue {
+	height: 8px;
+	background-color: #55b8f1;
+}/*top end here */
+/*----------------------------------------------------------
+			与homePage不同之处的微调
+------------------------------------------------------------*/
+ul#shezhi li {
+	height: 60px;
+}
+ul#shezhi li a {
+	line-height: 40px;
+	background-color: #fff;
+}
+.ui-listview .ui-li-has-thumb>img:first-child, .ui-listview .ui-li-has-thumb>.ui-btn>img:first-child, .ui-listview .ui-li-has-thumb .ui-li-thumb {
+position: absolute;
+left: 20px;
+top: 20px;
+max-height: 5em;
+max-width: 5em;
+} /*控制li左边img的位置*/
+.ui-btn-icon-right:after {
+right: 1em;
+top: 2em;
+} /*控制背景图标位置*/
+#mainContent ul li a {
+	padding-top: 10px;
+}
+#lastSet a{
+	padding-bottom: 0px;
+}
+

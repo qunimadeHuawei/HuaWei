@@ -6,14 +6,16 @@
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/themes/header.min.css">
   <link rel="stylesheet" href="../css/themes/jquery.mobile.icons.min.css">
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />
-<link rel="stylesheet" href="../css/themes/supplement.css">
-<script src="../js/jquery.js"></script>
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
-<script src="../js/min_height.js"></script>
-<script src="../js/taphold.js"></script>
-<script type="text/javascript">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />
+  <link rel="stylesheet" href="../css/themes/supplement.css">
+  <link rel="stylesheet" href="../css/themes/set.css">
+  <script src="../js/jquery.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+  <script src="../js/min_height.js"></script>
+  <script src="../js/taphold.js"></script>
+  <script src="../js/capacity.js"></script>
+  <script type="text/javascript">
     function showFileName()
       {
         var file = document.getElementById("upload");
@@ -26,25 +28,38 @@
 </head>
 <body>
 
-<div data-role="page" id="homePage" class="allPage">
+<div data-role="page" id="set" class="allPage">
   <div data-role="header" data-position="fixed" id="header">
-    <h1>华为网盘</h1>
-    <form>
-      <input id="upload" type="file" method="post" enctype="multipart/form-data" value="上传">
-      <input class="tap" type="button" value="上传" data-inline="true" data-mini="true">
-    </form>
+    <h1>设置</h1>
   </div>
 <!--header ends here  -->
 
 <!-- mainContent starts here  -->
   <div data-role="content" id="mainContent">
-    <ul data-role="listview" data-filter="true" data-filter-placeholder="搜索我的文件">
-      <li><a href="#"><img src="../images/homePage1_doc.png" width="38" height="42"><h2>舌尖上的中国.txt</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li>
-      <li><a href="#"><img src="../images/homePage1_pic.png" width="38" height="42"><h2>春光.png</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li>
-      <li><a href="#"><img src="../images/homePage1_video.png" width="38" height="42"><h2>神探夏洛克.rmvb</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li>
-      <li><a href="#"><img src="../images/homePage1_music.png" width="38" height="42"><h2>不要说话.mp3</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li>
-      <li><a href="#" class="floder"><img src="../images/homePage1_floder.png" width="38" height="42">新建文件夹</a></li>
+    <div class="top">
+      <div class="account clearfix">
+        <span class="account_left">华为网盘账号：XXXX</span>
+        <span class="account_right">注销</span>
+      </div>
+      <div class="capacity">
+        <div class="showInWord">
+          容量（<span class="used">400.5</span>/<span class="total">2055</span>） <!--用JS控制）-->
+        </div>
+        <div class="showInImg">
+          <div class="blue">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div >
+    <ul data-role="listview" id="shezhi">
+      <li><a href="#"><img src="../images/set_icon1.png" width="20" height="24" >仅WiFi环境下上传/下载</a></li>
+      <li><a href="#"><img src="../images/set_icon2.png" width="16" height="16">检查新版本</a></li>
+      <li><a href="#"><img src="../images/set_icon3.png" width="16" height="16">默认下载位置</a></li>
+      <li><a href="#"><img src="../images/set_icon4.png" width="16" height="16">用户反馈</a></li>
+      <li id="lastSet"><a href="#"><img src="../images/set_icon5.png" width="16" height="16">关于</a></li>
     <ul>
+  </div>
   </div>
 <!--  mainContent ends here   -->
 
