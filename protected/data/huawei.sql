@@ -2,13 +2,13 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `huawei` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+USE `huawei` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`user`
+-- Table `huawei`.`user`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`user` (
+CREATE TABLE IF NOT EXISTS `huawei`.`user` (
   `user_id` INT NOT NULL AUTO_INCREMENT,
   `user_name` VARCHAR(20) NOT NULL,
   `user_password` VARCHAR(64) NOT NULL,
@@ -17,9 +17,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`volume`
+-- Table `huawei`.`volume`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`volume` (
+CREATE TABLE IF NOT EXISTS `huawei`.`volume` (
   `volume_id` INT NOT NULL AUTO_INCREMENT,
   `user_id` INT NOT NULL,
   `volume_used` INT NOT NULL DEFAULT 0,
@@ -29,9 +29,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`file`
+-- Table `huawei`.`file`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`file` (
+CREATE TABLE IF NOT EXISTS `huawei`.`file` (
   `file_id` INT NOT NULL AUTO_INCREMENT,
   `file_name` VARCHAR(45) NOT NULL,
   `file_path` VARCHAR(45) NOT NULL,
@@ -41,9 +41,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`file_relation`
+-- Table `huawei`.`file_relation`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`file_relation` (
+CREATE TABLE IF NOT EXISTS `huawei`.`file_relation` (
   `file_relation_id` INT NOT NULL AUTO_INCREMENT,
   `user_id` INT NOT NULL,
   `file_id` INT NOT NULL COMMENT 'file_id 或 folder_i' /* comment truncated */ /*
@@ -59,9 +59,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`folder`
+-- Table `huawei`.`folder`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`folder` (
+CREATE TABLE IF NOT EXISTS `huawei`.`folder` (
   `folder_id` INT NOT NULL AUTO_INCREMENT,
   `folder_name` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`folder_id`))
@@ -69,9 +69,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`file_sort`
+-- Table `huawei`.`file_sort`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`file_sort` (
+CREATE TABLE IF NOT EXISTS `huawei`.`file_sort` (
   `file_sort_id` INT NOT NULL AUTO_INCREMENT,
   `user_id` INT NOT NULL,
   `file_id` INT NOT NULL,

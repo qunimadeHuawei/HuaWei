@@ -2,6 +2,8 @@
 
 class SiteController extends Controller
 {
+	public $defaultAction = 'homePage';
+	public $layout='//layouts/empty';
 	/**
 	 * Declares class-based actions.
 	 */
@@ -25,11 +27,11 @@ class SiteController extends Controller
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
 	 */
-	public function actionIndex()
+	public function actionHomePage()
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		$this->render('homePage');
 	}
 
 	/**
@@ -44,32 +46,6 @@ class SiteController extends Controller
 			else
 				$this->render('error', $error);
 		}
-	}
-
-	/**
-	 * Displays the contact page
-	 */
-	public function actionContact()
-	{
-		$model=new ContactForm;
-		if(isset($_POST['ContactForm']))
-		{
-			$model->attributes=$_POST['ContactForm'];
-			if($model->validate())
-			{
-				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
-				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
-				$headers="From: $name <{$model->email}>\r\n".
-					"Reply-To: {$model->email}\r\n".
-					"MIME-Version: 1.0\r\n".
-					"Content-Type: text/plain; charset=UTF-8";
-
-				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
-				$this->refresh();
-			}
-		}
-		$this->render('contact',array('model'=>$model));
 	}
 
 	/**
@@ -106,4 +82,86 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
+	/**
+	 * 
+	 * @return [type] [description]
+	 */
+	public function actionClassifyDoc()
+	{
+		$this->render('classify_doc');
+	}
+
+	/**
+	 * 
+	 * @return [type] [description]
+	 */
+	public function actionClassifyMusic()
+	{
+		$this->render('classify_music');
+	}
+
+	/**
+	 * 
+	 * @return [type] [description]
+	 */
+	public function actionClassifyOthers()
+	{
+		$this->render('classify_others');
+	}
+
+	/**
+	 * 
+	 * @return [type] [description]
+	 */
+	public function actionClassifyPic()
+	{
+		$this->render('classify_pic');
+	}
+
+	/**
+	 * 
+	 * @return [type] [description]
+	 */
+	public function actionClassifyVideo()
+	{
+		$this->render('classify_video');
+	}
+	
+	/**
+	 * 
+	 * @return [type] [description]
+	 */
+	public function actionTransportationUpload()
+	{
+		$this->render('transportationUpload');
+	}
+	
+	/**
+	 * 
+	 * @return [type] [description]
+	 */
+	public function actionTransportationDownload()
+	{
+		$this->render('transportationDownload');
+	}
+	
+	/**
+	 * 
+	 * @return [type] [description]
+	 */
+	public function actionTransportationYun()
+	{
+		$this->render('transportationYun');
+	}	
+
+	/**
+	 * 
+	 * @return [type] [description]
+	 */
+	public function actionSet()
+	{
+		$this->render('set');
+	}
+
 }
