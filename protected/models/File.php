@@ -11,6 +11,12 @@
  */
 class File extends CActiveRecord
 {
+	public static $doc=1;
+	public static $pic=2;
+	public static $music=3;
+	public static $video=4;
+	public static $others=5;
+	
 	/**
 	 * @return string the associated database table name
 	 */
@@ -19,6 +25,7 @@ class File extends CActiveRecord
 		return 'file';
 	}
 
+	public $file_type;
 	/**
 	 * @return array validation rules for model attributes.
 	 */
@@ -29,7 +36,7 @@ class File extends CActiveRecord
 		return array(
 			array('file_name, file_path', 'required'),
 			array('file_name, file_path', 'length', 'max'=>45),
-			array('create_time', 'safe'),
+			array('create_time,file_type', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('file_id, file_name, file_path, create_time', 'safe', 'on'=>'search'),

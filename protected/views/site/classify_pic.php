@@ -45,7 +45,9 @@
 <!-- mainContent starts here  -->
   <div data-role="content" id="mainContent">
     <ul data-role="listview" data-filter="true" data-filter-placeholder="搜索我的文件">
-      <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/homePage1_pic.png" width="38" height="42"><h2>春光.png</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li><li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/homePage1_pic.png" width="38" height="42"><h2>夏天.png</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li><li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/homePage1_pic.png" width="38" height="42"><h2>秋天.png</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li>
+      <?php foreach($file as $tmp_file){?>
+        <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/homePage1_pic.png" width="38" height="42"><h2><?php echo $tmp_file->file_name; ?></h2><p><?php echo Common::fileSize($tmp_file->file_size); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo Common::cutDateTime($tmp_file->create_time); ?></p></a></li>
+      <?php }?>
     <ul>
   </div>
 <!--  mainContent ends here   -->

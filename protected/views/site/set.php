@@ -38,12 +38,12 @@
   <div data-role="content" id="mainContent">
     <div class="top">
       <div class="account clearfix">
-        <span class="account_left">华为网盘账号：XXXX</span>
+        <span class="account_left">华为网盘账号：<?php echo Yii::app()->user->name; ?></span>
         <span class="account_right">注销</span>
       </div>
       <div class="capacity">
         <div class="showInWord">
-          容量（<span class="used">400.5</span>/<span class="total">2055</span>） <!--用JS控制）-->
+          容量（<span class="used"><?php echo Common::volumeUsed($volume); ?></span>/<span class="total">2048</span>G） <!--用JS控制）-->
         </div>
         <div class="showInImg">
           <div class="blue">

@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'folder':
  * @property integer $folder_id
  * @property string $folder_name
+ * @property string $create_time
  */
 class Folder extends CActiveRecord
 {
@@ -27,9 +28,10 @@ class Folder extends CActiveRecord
 		return array(
 			array('folder_name', 'required'),
 			array('folder_name', 'length', 'max'=>20),
+			array('create_time', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('folder_id, folder_name', 'safe', 'on'=>'search'),
+			array('folder_id, folder_name, create_time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,6 +54,7 @@ class Folder extends CActiveRecord
 		return array(
 			'folder_id' => 'Folder',
 			'folder_name' => 'Folder Name',
+			'create_time' => 'Create Time',
 		);
 	}
 
@@ -75,6 +78,7 @@ class Folder extends CActiveRecord
 
 		$criteria->compare('folder_id',$this->folder_id);
 		$criteria->compare('folder_name',$this->folder_name,true);
+		$criteria->compare('create_time',$this->create_time,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

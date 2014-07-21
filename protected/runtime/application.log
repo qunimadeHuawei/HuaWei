@@ -652,3 +652,1486 @@ Stack trace:
 REQUEST_URI=/HuaWei/index.php/images/border_top.png
 HTTP_REFERER=http://localhost/HuaWei/index.php/site/transportationYun
 ---
+2014/07/20 19:31:12 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty. The SQL statement executed was: .
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (83)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/20 19:31:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty. The SQL statement executed was: ' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1558): CDbCommand->queryRow()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(83): CActiveRecord->findBySql('')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/login
+---
+2014/07/20 19:31:24 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty. The SQL statement executed was: .
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (83)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/20 19:31:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty. The SQL statement executed was: ' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1558): CDbCommand->queryRow()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(83): CActiveRecord->findBySql('')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 19:44:32 [error] [exception.CException] exception 'CException' with message 'Property "FileRelation.folder_name" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('folder_name')
+#1 /var/www/html/HuaWei/protected/views/site/homePage.php(43): CActiveRecord->__get('folder_name')
+#2 /var/www/html/HuaWei/framework/web/CBaseController.php(126): require('/var/www/html/H...')
+#3 /var/www/html/HuaWei/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/H...', Array, true)
+#4 /var/www/html/HuaWei/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/H...', Array, true)
+#5 /var/www/html/HuaWei/framework/web/CController.php(782): CController->renderPartial('homePage', Array, true)
+#6 /var/www/html/HuaWei/protected/controllers/SiteController.php(87): CController->render('homePage', Array)
+#7 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#8 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#13 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 19:45:35 [error] [php] Trying to get property of non-object (/var/www/html/HuaWei/protected/views/site/homePage.php:43)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/html/HuaWei/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(87): SiteController->render()
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php
+in /var/www/html/HuaWei/protected/views/site/homePage.php (43)
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (87)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/20 19:48:21 [error] [php] Trying to get property of non-object (/var/www/html/HuaWei/protected/views/site/homePage.php:43)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/html/HuaWei/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(87): SiteController->render()
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php
+in /var/www/html/HuaWei/protected/views/site/homePage.php (43)
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (87)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/20 22:32:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'zechun_huawei'@'119.251.244.55' (using password: YES)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 22:33:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2005] Unknown MySQL server host '192.185.2.37:2082' (3)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 22:33:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2005] Unknown MySQL server host '192.185.2.37:2082' (3)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 22:33:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'zechun_huawei'@'119.251.244.55' (using password: YES)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 22:33:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'zechun'@'119.251.244.55' (using password: YES)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 22:42:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '31.170.167.95' (4)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 22:42:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2005] Unknown MySQL server host 'sql9.500yun.com' (2)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 22:43:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '31.170.167.95' (4)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 22:43:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2005] Unknown MySQL server host 'mysql.500yun.com' (2)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 22:43:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2005] Unknown MySQL server host 'mysql.500yun.com' (2)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 22:44:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2005] Unknown MySQL server host 'mysql.500yun.com' (2)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 22:44:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2005] Unknown MySQL server host 'mysql.500yun.com' (2)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 22:46:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'u395890851_huawe'@'119.251.244.55' (using password: YES)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 22:52:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '54.234.36.53' (4)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 22:52:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '54.234.36.53' (4)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 22:52:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '54.234.36.53' (4)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/20 22:53:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '54.234.36.53' (4)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/21 07:49:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '54.234.36.53' (4)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/21 08:16:30 [error] [php] Undefined variable: doc (/var/www/html/HuaWei/protected/controllers/SiteController.php:96)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/classifyDoc
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (96)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 08:16:48 [error] [php] Undefined variable: doc (/var/www/html/HuaWei/protected/controllers/SiteController.php:96)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/classifyDoc
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (96)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 08:16:48 [error] [php] Undefined variable: doc (/var/www/html/HuaWei/protected/controllers/SiteController.php:96)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/classifyDoc
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (96)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 08:16:50 [error] [php] Undefined variable: doc (/var/www/html/HuaWei/protected/controllers/SiteController.php:96)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/classifyDoc
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (96)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 08:17:00 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '>doc' at line 1. The SQL statement executed was: select file.file_id,file.file_name,file.file_size,file.create_time from file_sort inner join file on file_sort.file_id=file.file_id where user_id=1 and  file_type=File->doc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (96)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 08:17:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '>doc' at line 1. The SQL statement executed was: select file.file_id,file.file_name,file.file_size,file.create_time from file_sort inner join file on file_sort.file_id=file.file_id where user_id=1 and  file_type=File->doc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(96): CActiveRecord->findAllBySql('select file.fil...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionClassifyDoc()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('classifyDoc')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/classifyDo...')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/classifyDoc
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 08:18:32 [error] [php] Undefined variable: doc (/var/www/html/HuaWei/protected/controllers/SiteController.php:101)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/classifyDoc
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (101)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 08:18:33 [error] [php] Undefined variable: doc (/var/www/html/HuaWei/protected/controllers/SiteController.php:101)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/classifyDoc
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (101)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 08:18:50 [error] [php] Undefined variable: doc (/var/www/html/HuaWei/protected/controllers/SiteController.php:101)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/classifyDoc
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (101)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 08:19:03 [error] [php] Undefined variable: doc (/var/www/html/HuaWei/protected/controllers/SiteController.php:101)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/classifyDoc
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (101)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 08:19:03 [error] [php] Undefined variable: doc (/var/www/html/HuaWei/protected/controllers/SiteController.php:101)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/classifyDoc
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (101)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 08:19:11 [error] [php] Undefined variable: doc (/var/www/html/HuaWei/protected/controllers/SiteController.php:102)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/classifyDoc
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (102)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 08:19:12 [error] [php] Undefined variable: doc (/var/www/html/HuaWei/protected/controllers/SiteController.php:102)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/classifyDoc
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (102)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 08:19:13 [error] [php] Undefined variable: doc (/var/www/html/HuaWei/protected/controllers/SiteController.php:102)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/classifyDoc
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (102)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 08:21:19 [error] [php] Undefined variable: doc (/var/www/html/HuaWei/protected/controllers/SiteController.php:101)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/classifyDoc
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (101)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 08:29:32 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'DOC' in 'where clause'. The SQL statement executed was: select file.file_id,file.file_name,file.file_size,file.create_time from file_sort inner join file on file_sort.file_id=file.file_id where user_id=1 and  file_type=DOC.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (96)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 08:29:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'DOC' in 'where clause'. The SQL statement executed was: select file.file_id,file.file_name,file.file_size,file.create_time from file_sort inner join file on file_sort.file_id=file.file_id where user_id=1 and  file_type=DOC' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(96): CActiveRecord->findAllBySql('select file.fil...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionClassifyDoc()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('classifyDoc')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/classifyDo...')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/classifyDoc
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 08:29:47 [error] [php] Undefined variable: doc (/var/www/html/HuaWei/protected/controllers/SiteController.php:96)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/classifyDoc
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (96)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 08:29:48 [error] [php] Undefined variable: doc (/var/www/html/HuaWei/protected/controllers/SiteController.php:96)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/classifyDoc
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (96)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 08:50:22 [error] [php] Undefined variable: file (/var/www/html/HuaWei/protected/controllers/SiteController.php:132)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/classifyPic
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (132)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 09:36:27 [error] [exception.CException] exception 'CException' with message 'Volume and its behaviors do not have a method or closure named "findByCondition".' in /var/www/html/HuaWei/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(227): CComponent->__call('findByCondition', Array)
+#1 /var/www/html/HuaWei/protected/controllers/SiteController.php(183): CActiveRecord->__call('findByCondition', Array)
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(183): Volume->findByCondition('user_id=1')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionSet()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('set')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/set')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/set
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/transportationUpload
+---
+2014/07/21 09:43:57 [error] [php] Undefined variable: size (/var/www/html/HuaWei/protected/models/Common.php:37)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/html/HuaWei/framework/web/CController.php(869): SiteController->renderFile()
+#2 /var/www/html/HuaWei/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /var/www/html/HuaWei/protected/controllers/SiteController.php(186): SiteController->render()
+#4 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionSet()
+#5 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#7 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/set
+in /var/www/html/HuaWei/protected/models/Common.php (37)
+in /var/www/html/HuaWei/protected/views/site/set.php (46)
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (186)
+2014/07/21 09:48:23 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.user_id" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/auth/CWebUser.php(146): CComponent->__get('user_id')
+#1 /var/www/html/HuaWei/protected/controllers/SiteController.php(183): CWebUser->__get('user_id')
+#2 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionSet()
+#3 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('set')
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/set')
+#8 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/HuaWei/index.php/site/set
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/transportationUpload
+---
+2014/07/21 09:48:32 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.user_id" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/base/CModule.php(105): CComponent->__get('user_id')
+#1 /var/www/html/HuaWei/protected/controllers/SiteController.php(183): CModule->__get('user_id')
+#2 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionSet()
+#3 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('set')
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/set')
+#8 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/HuaWei/index.php/site/set
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/transportationUpload
+---
+2014/07/21 09:48:43 [error] [php] Trying to get property of non-object (/var/www/html/HuaWei/protected/controllers/SiteController.php:185)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/set
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (185)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 09:50:30 [error] [php] Trying to get property of non-object (/var/www/html/HuaWei/protected/controllers/SiteController.php:185)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/set
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (185)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 09:52:36 [error] [php] Trying to get property of non-object (/var/www/html/HuaWei/protected/controllers/SiteController.php:186)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/set
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (186)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 09:52:38 [error] [php] Trying to get property of non-object (/var/www/html/HuaWei/protected/controllers/SiteController.php:186)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/set
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (186)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 09:55:18 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.named" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/auth/CWebUser.php(146): CComponent->__get('named')
+#1 /var/www/html/HuaWei/protected/controllers/SiteController.php(183): CWebUser->__get('named')
+#2 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionSet()
+#3 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('set')
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/set')
+#8 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/HuaWei/index.php/site/set
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/transportationUpload
+---
+2014/07/21 10:02:15 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('password')
+#1 /var/www/html/HuaWei/protected/components/UserIdentity.php(38): CActiveRecord->__get('password')
+#2 /var/www/html/HuaWei/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /var/www/html/HuaWei/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/HuaWei/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/HuaWei/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/HuaWei/protected/controllers/SiteController.php(59): CModel->validate()
+#7 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/HuaWei/index.php/site/login
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/login
+---
+2014/07/21 10:09:11 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.user_id" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/auth/CWebUser.php(146): CComponent->__get('user_id')
+#1 /var/www/html/HuaWei/protected/controllers/SiteController.php(183): CWebUser->__get('user_id')
+#2 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionSet()
+#3 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('set')
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/set')
+#8 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/HuaWei/index.php/site/set
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 13:12:45 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.password" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/auth/CWebUser.php(146): CComponent->__get('password')
+#1 /var/www/html/HuaWei/protected/controllers/SiteController.php(183): CWebUser->__get('password')
+#2 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionSet()
+#3 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('set')
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/set')
+#8 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/HuaWei/index.php/site/set
+HTTP_REFERER=http://localhost/HuaWei/index.php
+---
+2014/07/21 13:12:48 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.passwd" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/auth/CWebUser.php(146): CComponent->__get('passwd')
+#1 /var/www/html/HuaWei/protected/controllers/SiteController.php(183): CWebUser->__get('passwd')
+#2 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionSet()
+#3 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('set')
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/set')
+#8 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/HuaWei/index.php/site/set
+HTTP_REFERER=http://localhost/HuaWei/index.php
+---
+2014/07/21 13:13:40 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.user_id" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/auth/CWebUser.php(146): CComponent->__get('user_id')
+#1 /var/www/html/HuaWei/protected/controllers/SiteController.php(183): CWebUser->__get('user_id')
+#2 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionSet()
+#3 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('set')
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/set')
+#8 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/HuaWei/index.php/site/set
+HTTP_REFERER=http://localhost/HuaWei/index.php
+---
+2014/07/21 13:13:40 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.user_id" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/auth/CWebUser.php(146): CComponent->__get('user_id')
+#1 /var/www/html/HuaWei/protected/controllers/SiteController.php(183): CWebUser->__get('user_id')
+#2 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionSet()
+#3 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('set')
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/set')
+#8 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/HuaWei/index.php/site/set
+HTTP_REFERER=http://localhost/HuaWei/index.php
+---
+2014/07/21 15:04:44 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '::app()->user->id and type=1 and locate=0' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id=Yii::app()->user->id and type=1 and locate=0.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (82)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 15:04:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '::app()->user->id and type=1 and locate=0' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id=Yii::app()->user->id and type=1 and locate=0' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/set
+---
+2014/07/21 15:48:21 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'download.create_time' in 'field list'. The SQL statement executed was: select file.file_id,file.file_name,file.file_size,download.create_time from download inner join file on download.file_id=file.file_id where user_id=1 order by create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (168)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 15:48:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'download.create_time' in 'field list'. The SQL statement executed was: select file.file_id,file.file_name,file.file_size,download.create_time from download inner join file on download.file_id=file.file_id where user_id=1 order by create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(168): CActiveRecord->findAllBySql('select file.fil...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionTransportationDownload()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('transportationD...')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/transporta...')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/transportationDownLoad
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/transportationUpload
+---
+2014/07/21 15:48:24 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'download.create_time' in 'field list'. The SQL statement executed was: select file.file_id,file.file_name,file.file_size,download.create_time from download inner join file on download.file_id=file.file_id where user_id=1 order by create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (168)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 15:48:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'download.create_time' in 'field list'. The SQL statement executed was: select file.file_id,file.file_name,file.file_size,download.create_time from download inner join file on download.file_id=file.file_id where user_id=1 order by create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(168): CActiveRecord->findAllBySql('select file.fil...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionTransportationDownload()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('transportationD...')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/transporta...')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/transportationDownLoad
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/transportationUpload
+---
+2014/07/21 15:50:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'download.create_time' in 'field list'. The SQL statement executed was: select file.file_id,file.file_name,file.file_size,download.create_time from download inner join file on download.file_id=file.file_id where user_id=1 order by create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (168)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 15:50:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'download.create_time' in 'field list'. The SQL statement executed was: select file.file_id,file.file_name,file.file_size,download.create_time from download inner join file on download.file_id=file.file_id where user_id=1 order by create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(168): CActiveRecord->findAllBySql('select file.fil...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionTransportationDownload()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('transportationD...')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/transporta...')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/transportationDownLoad
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/transportationUpload
+---
+2014/07/21 16:13:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'file.file_type' in 'field list'. The SQL statement executed was: select file.file_id,file.file_name,file.file_size,file.file_type,file.create_time from file_relation as rel inner join file on rel.file_id=file.file_id where user_id=1 and type=0 and locate=0 order by create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (83)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 16:13:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'file.file_type' in 'field list'. The SQL statement executed was: select file.file_id,file.file_name,file.file_size,file.file_type,file.create_time from file_relation as rel inner join file on rel.file_id=file.file_id where user_id=1 and type=0 and locate=0 order by create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(83): CActiveRecord->findAllBySql('select file.fil...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:29:15 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from file as f,file_relation as r,file_sort as s where r.user_id=1and r.type=0 and r.location=0.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (84)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 16:29:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from file as f,file_relation as r,file_sort as s where r.user_id=1and r.type=0 and r.location=0' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(84): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:29:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from file as f,file_relation as r,file_sort as s where f.file_id=r.file_id and r.user_id=1and r.type=0 and r.location=0.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (84)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 16:29:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from file as f,file_relation as r,file_sort as s where f.file_id=r.file_id and r.user_id=1and r.type=0 and r.location=0' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(84): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:29:55 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from file as f,file_relation as r,file_sort as s where f.file_id=r.file_id and r.user_id=1and r.type=0 and r.location=0.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (84)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 16:29:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from file as f,file_relation as r,file_sort as s where f.file_id=r.file_id and r.user_id=1and r.type=0 and r.location=0' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(84): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:33:05 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=1and r.type=0 and r.location=0.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (84)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 16:33:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=1and r.type=0 and r.location=0' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(84): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:33:06 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=1and r.type=0 and r.location=0.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (84)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 16:33:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=1and r.type=0 and r.location=0' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(84): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:33:08 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=1and r.type=0 and r.location=0.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (84)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 16:33:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=1and r.type=0 and r.location=0' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(84): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:33:08 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=1and r.type=0 and r.location=0.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (84)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 16:33:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=1and r.type=0 and r.location=0' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(84): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:33:09 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=1and r.type=0 and r.location=0.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (84)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 16:33:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=1and r.type=0 and r.location=0' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(84): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:33:09 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=1and r.type=0 and r.location=0.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (84)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 16:33:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r.type=0 and r.location=0' at line 1. The SQL statement executed was: select f.file_id,f.file_name,s.file_type from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=1and r.type=0 and r.location=0' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(84): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:37:42 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'r.location' in 'where clause'. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,f.create_time,s.file_type from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=1 and r.type=0 and r.location=0 order by f.create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (84)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 16:37:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'r.location' in 'where clause'. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,f.create_time,s.file_type from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=1 and r.type=0 and r.location=0 order by f.create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(84): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:39:10 [error] [exception.CException] exception 'CException' with message 'Property "File.type" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('type')
+#1 /var/www/html/HuaWei/protected/views/site/homePage.php(46): CActiveRecord->__get('type')
+#2 /var/www/html/HuaWei/framework/web/CBaseController.php(126): require('/var/www/html/H...')
+#3 /var/www/html/HuaWei/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/H...', Array, true)
+#4 /var/www/html/HuaWei/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/H...', Array, true)
+#5 /var/www/html/HuaWei/framework/web/CController.php(782): CController->renderPartial('homePage', Array, true)
+#6 /var/www/html/HuaWei/protected/controllers/SiteController.php(88): CController->render('homePage', Array)
+#7 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#8 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#13 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:39:36 [error] [exception.CException] exception 'CException' with message 'Property "File.file_type" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('file_type')
+#1 /var/www/html/HuaWei/protected/views/site/homePage.php(46): CActiveRecord->__get('file_type')
+#2 /var/www/html/HuaWei/framework/web/CBaseController.php(126): require('/var/www/html/H...')
+#3 /var/www/html/HuaWei/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/H...', Array, true)
+#4 /var/www/html/HuaWei/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/H...', Array, true)
+#5 /var/www/html/HuaWei/framework/web/CController.php(782): CController->renderPartial('homePage', Array, true)
+#6 /var/www/html/HuaWei/protected/controllers/SiteController.php(88): CController->render('homePage', Array)
+#7 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#8 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#13 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:39:37 [error] [exception.CException] exception 'CException' with message 'Property "File.file_type" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('file_type')
+#1 /var/www/html/HuaWei/protected/views/site/homePage.php(46): CActiveRecord->__get('file_type')
+#2 /var/www/html/HuaWei/framework/web/CBaseController.php(126): require('/var/www/html/H...')
+#3 /var/www/html/HuaWei/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/H...', Array, true)
+#4 /var/www/html/HuaWei/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/H...', Array, true)
+#5 /var/www/html/HuaWei/framework/web/CController.php(782): CController->renderPartial('homePage', Array, true)
+#6 /var/www/html/HuaWei/protected/controllers/SiteController.php(88): CController->render('homePage', Array)
+#7 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#8 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#13 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:39:58 [error] [exception.CException] exception 'CException' with message 'Property "File.file_type" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('file_type')
+#1 /var/www/html/HuaWei/protected/views/site/homePage.php(46): CActiveRecord->__get('file_type')
+#2 /var/www/html/HuaWei/framework/web/CBaseController.php(126): require('/var/www/html/H...')
+#3 /var/www/html/HuaWei/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/H...', Array, true)
+#4 /var/www/html/HuaWei/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/H...', Array, true)
+#5 /var/www/html/HuaWei/framework/web/CController.php(782): CController->renderPartial('homePage', Array, true)
+#6 /var/www/html/HuaWei/protected/controllers/SiteController.php(88): CController->render('homePage', Array)
+#7 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#8 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#13 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:39:59 [error] [exception.CException] exception 'CException' with message 'Property "File.file_type" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('file_type')
+#1 /var/www/html/HuaWei/protected/views/site/homePage.php(46): CActiveRecord->__get('file_type')
+#2 /var/www/html/HuaWei/framework/web/CBaseController.php(126): require('/var/www/html/H...')
+#3 /var/www/html/HuaWei/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/H...', Array, true)
+#4 /var/www/html/HuaWei/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/H...', Array, true)
+#5 /var/www/html/HuaWei/framework/web/CController.php(782): CController->renderPartial('homePage', Array, true)
+#6 /var/www/html/HuaWei/protected/controllers/SiteController.php(88): CController->render('homePage', Array)
+#7 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#8 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#13 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:39:59 [error] [exception.CException] exception 'CException' with message 'Property "File.file_type" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('file_type')
+#1 /var/www/html/HuaWei/protected/views/site/homePage.php(46): CActiveRecord->__get('file_type')
+#2 /var/www/html/HuaWei/framework/web/CBaseController.php(126): require('/var/www/html/H...')
+#3 /var/www/html/HuaWei/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/H...', Array, true)
+#4 /var/www/html/HuaWei/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/H...', Array, true)
+#5 /var/www/html/HuaWei/framework/web/CController.php(782): CController->renderPartial('homePage', Array, true)
+#6 /var/www/html/HuaWei/protected/controllers/SiteController.php(88): CController->render('homePage', Array)
+#7 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#8 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#13 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:40:00 [error] [exception.CException] exception 'CException' with message 'Property "File.file_type" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('file_type')
+#1 /var/www/html/HuaWei/protected/views/site/homePage.php(46): CActiveRecord->__get('file_type')
+#2 /var/www/html/HuaWei/framework/web/CBaseController.php(126): require('/var/www/html/H...')
+#3 /var/www/html/HuaWei/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/H...', Array, true)
+#4 /var/www/html/HuaWei/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/H...', Array, true)
+#5 /var/www/html/HuaWei/framework/web/CController.php(782): CController->renderPartial('homePage', Array, true)
+#6 /var/www/html/HuaWei/protected/controllers/SiteController.php(88): CController->render('homePage', Array)
+#7 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#8 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#13 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:41:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "object(File)".' in /var/www/html/HuaWei/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(270): CController->missingAction('object(File)')
+#1 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('object(File)')
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/object(Fil...')
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/HuaWei/index.php/site/object(File)
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:41:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "object(File)".' in /var/www/html/HuaWei/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(270): CController->missingAction('object(File)')
+#1 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('object(File)')
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/object(Fil...')
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/HuaWei/index.php/site/object(File)
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/homePage
+---
+2014/07/21 16:46:31 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.file_typde' in 'field list'. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,s.file_typde,f.create_time from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=1 and r.type=0 and r.locate=0 order by f.create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (84)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 16:46:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.file_typde' in 'field list'. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,s.file_typde,f.create_time from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=1 and r.type=0 and r.locate=0 order by f.create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(84): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/21 16:46:55 [error] [exception.CException] exception 'CException' with message 'Property "File.file_type" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('file_type')
+#1 /var/www/html/HuaWei/protected/views/site/homePage.php(46): CActiveRecord->__get('file_type')
+#2 /var/www/html/HuaWei/framework/web/CBaseController.php(126): require('/var/www/html/H...')
+#3 /var/www/html/HuaWei/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/H...', Array, true)
+#4 /var/www/html/HuaWei/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/H...', Array, true)
+#5 /var/www/html/HuaWei/framework/web/CController.php(782): CController->renderPartial('homePage', Array, true)
+#6 /var/www/html/HuaWei/protected/controllers/SiteController.php(89): CController->render('homePage', Array)
+#7 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#8 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#13 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/21 16:47:08 [error] [exception.CException] exception 'CException' with message 'Property "File.file_type" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('file_type')
+#1 /var/www/html/HuaWei/protected/views/site/homePage.php(46): CActiveRecord->__get('file_type')
+#2 /var/www/html/HuaWei/framework/web/CBaseController.php(126): require('/var/www/html/H...')
+#3 /var/www/html/HuaWei/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/H...', Array, true)
+#4 /var/www/html/HuaWei/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/H...', Array, true)
+#5 /var/www/html/HuaWei/framework/web/CController.php(782): CController->renderPartial('homePage', Array, true)
+#6 /var/www/html/HuaWei/protected/controllers/SiteController.php(89): CController->render('homePage', Array)
+#7 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#8 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#13 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/21 16:49:44 [error] [exception.CException] exception 'CException' with message 'Property "File.file_type" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('file_type')
+#1 /var/www/html/HuaWei/protected/views/site/homePage.php(46): CActiveRecord->__get('file_type')
+#2 /var/www/html/HuaWei/framework/web/CBaseController.php(126): require('/var/www/html/H...')
+#3 /var/www/html/HuaWei/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/H...', Array, true)
+#4 /var/www/html/HuaWei/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/H...', Array, true)
+#5 /var/www/html/HuaWei/framework/web/CController.php(782): CController->renderPartial('homePage', Array, true)
+#6 /var/www/html/HuaWei/protected/controllers/SiteController.php(89): CController->render('homePage', Array)
+#7 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#8 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#13 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/21 17:02:06 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.type' in 'where clause'. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,s.file_type,u.create_time from (file as f  left join upload as u on f.file_id=u.file_id) left join file_sort as s on f.file_id=s.file_id where u.user_id=1 and u.type=0 and u.locate=0 order by u.create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (158)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/21 17:02:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.type' in 'where clause'. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,s.file_type,u.create_time from (file as f  left join upload as u on f.file_id=u.file_id) left join file_sort as s on f.file_id=s.file_id where u.user_id=1 and u.type=0 and u.locate=0 order by u.create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(158): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionTransportationUpload()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('transportationU...')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/transporta...')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/transportationUpload
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/classifyOthers
+---

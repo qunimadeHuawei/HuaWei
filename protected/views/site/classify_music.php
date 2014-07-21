@@ -45,10 +45,9 @@
 <!-- mainContent starts here  -->
   <div data-role="content" id="mainContent">
     <ul data-role="listview" data-filter="true" data-filter-placeholder="搜索我的文件">
-      <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/homePage1_music.png" width="38" height="42"><h2>不要说话.mp3</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li>
-      <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/homePage1_music.png" width="38" height="42"><h2>十一年.mp3</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li>
-      <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/homePage1_music.png" width="38" height="42"><h2>一无所有.mp3</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li>
-      <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/homePage1_music.png" width="38" height="42"><h2>平凡之路.mp3</h2><p>586k&nbsp;&nbsp;&nbsp;&nbsp;2014-07-14</p></a></li>
+      <?php foreach($file as $tmp_file){?>
+        <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/homePage1_music.png" width="38" height="42"><h2><?php echo $tmp_file->file_name; ?></h2><p><?php echo Common::fileSize($tmp_file->file_size); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo Common::cutDateTime($tmp_file->create_time); ?></p></a></li>
+      <?php }?>
     <ul>
   </div>
 <!--  mainContent ends here   -->

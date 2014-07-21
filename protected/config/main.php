@@ -57,6 +57,13 @@ return array(
 			'password' => 'toor',
 			'charset' => 'utf8',
 		),
+		/*'db'=>array(
+			'connectionString' => 'mysql:host=54.234.36.53;dbname=huawei',
+			'emulatePrepare' => true,
+			'username' => 'adminth4bAND',
+			'password' => '9S8s8GKgQY2u',
+			'charset' => 'utf8',
+		),*/
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors

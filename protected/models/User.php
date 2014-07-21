@@ -6,7 +6,7 @@
  * The followings are the available columns in table 'user':
  * @property integer $user_id
  * @property string $user_name
- * @property string $user_password
+ * @property string $password
  */
 class User extends CActiveRecord
 {
@@ -26,12 +26,12 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('user_name, user_password', 'required'),
+			array('user_name, password', 'required'),
 			array('user_name', 'length', 'max'=>20),
-			array('user_password', 'length', 'max'=>64),
+			array('password', 'length', 'max'=>64),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('user_id, user_name, user_password', 'safe', 'on'=>'search'),
+			array('user_id, user_name, password', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,7 +54,7 @@ class User extends CActiveRecord
 		return array(
 			'user_id' => 'User',
 			'user_name' => 'User Name',
-			'user_password' => 'User Password',
+			'password' => 'User Password',
 		);
 	}
 
@@ -78,7 +78,7 @@ class User extends CActiveRecord
 
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('user_name',$this->user_name,true);
-		$criteria->compare('user_password',$this->user_password,true);
+		$criteria->compare('password',$this->password,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -94,5 +94,16 @@ class User extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	/**
+	 * md5加密
+	 * @param  [type] $value [description]
+	 * @return [type]        [description]
+	 */
+	public function encrypt($value) {
+	//	$value = $value."huawei";
+	//	return md5($value);
+		return $value;
 	}
 }
