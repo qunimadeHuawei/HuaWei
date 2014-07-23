@@ -164,12 +164,9 @@ class File extends CActiveRecord
 	* $file 文件名
 	* $dir 文件所在路径名
 	 */
-	public function delFile($file,$dir='')
+	public function delFile()
 	{
-		if($dir == '')
-			$dir = Yii::app()->basePath."/../files/".$file;
-		else 
-			$dir = $dir.$file;
+		$dir = Yii::app()->basePath."/../files/".$this->file_path;
 		if(file_exists($dir)){
 			unlink($dir);
 		}

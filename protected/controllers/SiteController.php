@@ -298,7 +298,8 @@ class SiteController extends Controller
 			$file_name = $file->file_name;
 			$file_path = Yii::app()->basePath."/../files/".$file->file_path;
 			if(!file_exists($file_path))
-			{	echo '对不起你要下载的文件不存在';
+			{	
+				echo '对不起你要下载的文件不存在';
 				echo $file->file_path;
 			    	return false;
 			}
@@ -328,16 +329,6 @@ class SiteController extends Controller
 		         echo '对不起,没有可下载的文件';
 		}
 	}
-
-	/**
-	* Updates a particular model.
-	* @param integer $id the ID of the model to be updated
-	 */
-	public function actionRename($id)
-	{
-		$model=$this->loadModel($id);
-		$this->oldFile = $model->picture;
-	}
 	
 	/**
 	* Deletes a particular model.
@@ -345,13 +336,35 @@ class SiteController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$model = $this->loadModel($id);
-		$this->delFile($model->picture);
-		$model->delete();
+		$file = File::model()->findBySql("select * from file_relation inner join file on file_relation.file_id=file.file_id where user_id=".Yii::app()->user->id." and file.file_id=".$id);
+		if($file != null)
+		{
+			$file->delFile();
+			$file->delete();
+			$fileVolume = Volume::model()->findByAttributes(array('user_id'=>Yii::app()->user->id));
+			$fileVolume->volume_used -= $file->file_size;
+			$fileVolume->save();
+			echo 'ture';	
+		}else{
+			echo 'false';
+		}
+	}
 
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+	/**
+	* Updates a particular model.
+	* @param integer $id the ID of the model to be updated
+	 */
+	public function actionRename($id)
+	{
+		$file = File::model()->findBySql("select * from file_relation inner join file on file_relation.file_id=file.file_id where user_id=".Yii::app()->user->id." and file.file_id=".$id);
+		if($file != null)
+		{
+			$file->file_name = $_POST['new_name'];
+			$file->save();
+			echo 'ture';
+		}else{
+			echo 'false';
+		}
 	}
 
 	/**
