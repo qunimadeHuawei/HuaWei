@@ -2941,3 +2941,89 @@ Stack trace:
 REQUEST_URI=/HuaWei/index.php/site/download/24
 HTTP_REFERER=http://localhost/HuaWei/index.php/site/test
 ---
+2014/07/23 21:23:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'lzc'@'localhost' (using password: YES)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1517): CActiveRecord->getTableAlias(true)
+#7 /var/www/html/HuaWei/protected/components/UserIdentity.php(40): CActiveRecord->findByAttributes(Array)
+#8 /var/www/html/HuaWei/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#9 /var/www/html/HuaWei/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#10 /var/www/html/HuaWei/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#11 /var/www/html/HuaWei/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#12 /var/www/html/HuaWei/protected/controllers/SiteController.php(95): CModel->validate()
+#13 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#14 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#15 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 /var/www/html/HuaWei/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#17 /var/www/html/HuaWei/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#21 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('login')
+#23 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#24 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#25 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/HuaWei/index.php/site/login
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/login
+---
+2014/07/23 21:24:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'lzc'@'localhost' (using password: YES)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(118): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/html/HuaWei/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#18 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#19 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/HuaWei/index.php
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/login
+---
+2014/07/23 21:26:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /var/www/html/HuaWei/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/HuaWei/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/HuaWei/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/HuaWei/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1580): CActiveRecord->getCommandBuilder()
+#7 /var/www/html/HuaWei/protected/controllers/SiteController.php(118): CActiveRecord->findAllBySql('select folder.f...')
+#8 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#9 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /var/www/html/HuaWei/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/html/HuaWei/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#18 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#19 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/HuaWei/index.php
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/login
+---
