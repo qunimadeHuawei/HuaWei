@@ -4,6 +4,18 @@ class SiteController extends Controller
 {
 	public $defaultAction = 'homePage';
 	public $layout='//layouts/empty';
+
+	/**
+	 * @return array action filters
+	 */
+	public function filters()
+	{
+		return array(
+			'accessControl', // perform access control for CRUD operations
+ 			//'postOnly', // we only allow deletion via POST request
+		);
+	}
+
 	/**
 	 * Declares class-based actions.
 	 */
@@ -19,6 +31,30 @@ class SiteController extends Controller
 			// They can be accessed via: index.php?r=site/page&view=FileName
 			'page'=>array(
 				'class'=>'CViewAction',
+			),
+		);
+	}
+
+	/**
+	 * Specifies the access control rules.
+	 * This method is used by the 'accessControl' filter.
+	 * @return array access control rules
+	 */
+	public function accessRules()
+	{
+		return array(
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('login'),
+				'users'=>array('*'),
+			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('test','homePage','classifyDoc','classifyMusic','classifyPic','classifyVideo','classifyOthers','transportationUpload','transportationDownload','transportationYun','set',
+						'upload','download','rename','copy','move','delete'
+					),
+				'users'=>array('@'),
+			),
+			array('deny',  // deny all users
+				'users'=>array('*'),
 			),
 		);
 	}
@@ -194,6 +230,146 @@ class SiteController extends Controller
 		$this->render('set',array(
 			'volume'=>$volume->volume_used,
 		));
+	}
+
+/****************************************************************************      功能函数       ******************************************************************************************/
+/****************************************************************************      功能函数       ******************************************************************************************/
+/****************************************************************************      功能函数       ******************************************************************************************/
+/****************************************************************************      功能函数       ******************************************************************************************/
+/****************************************************************************      功能函数       ******************************************************************************************/
+/****************************************************************************      功能函数       ******************************************************************************************/
+/****************************************************************************      功能函数       ******************************************************************************************/
+
+	/**
+	 * 用于测试
+	 * @return [type] [description]
+	 */
+	public function actionTest()
+	{
+		$this->render('test',array(
+		//	'volume'=>$volume->volume_used,
+		));
+	}	
+
+	/**
+	 * 上传文件
+	 */
+	public function actionUpload()
+	{
+		$file = new File;	
+		$fileRelation = new FileRelation;
+		$fileSort = new FileSort;
+		$fileVolume = Volume::model()->findByAttributes(array('user_id'=>Yii::app()->user->id));
+		$fileUpload = new Upload;	
+		$file->changeName();
+		if($file->moveFile()){
+			$file->save();
+			
+			$fileRelation->user_id = Yii::app()->user->id;
+			$fileRelation->file_id = $file->file_id;
+			$fileRelation->save();
+			
+			$fileSort->user_id = Yii::app()->user->id;
+			$fileSort->file_id = $file->file_id;
+			$fileSort->file_type = Common::getFileType($file->file_type);
+			$fileSort->save();
+			
+			$fileVolume->volume_used += $file->file_size;
+			$fileVolume->save();
+			
+			$fileUpload->user_id = Yii::app()->user->id;
+			$fileUpload->file_id = $file->file_id;
+			$fileUpload->save();
+			echo "ok";
+		}else{
+			echo "false";
+		}
+	}
+
+	/**
+	 * 下载
+	 * @return [type] [description]
+	 */
+	public function actionDownload($id)
+	{
+		$file = File::model()->findBySql("select * from file_relation inner join file on file_relation.file_id=file.file_id where user_id=".Yii::app()->user->id." and file.file_id=".$id);
+		//var_dump($file);die;
+		if($file != null){
+			$file_name = $file->file_name;
+			$file_path = Yii::app()->basePath."/../files/".$file->file_path;
+			if(!file_exists($file_path))
+			{	echo '对不起你要下载的文件不存在';
+				echo $file->file_path;
+			    	return false;
+			}
+			$file_size = filesize($file_path);
+			
+			header("Content-type: application/octet-stream;charset=gbk");
+			header("Accept-Ranges: bytes");
+			header("Accept-Length: $file_size");
+			header("Content-Disposition: attachment; filename=".$file_name);
+			
+			$fp = fopen($file_path,"r");
+			$buffer_size = 1024;
+			$cur_pos = 0;
+			
+			while(!feof($fp)&&$file_size-$cur_pos>$buffer_size)
+			{
+			    $buffer = fread($fp,$buffer_size);
+			    echo $buffer;
+			    $cur_pos += $buffer_size;
+			}
+			
+			$buffer = fread($fp,$file_size-$cur_pos);
+			echo $buffer;
+			fclose($fp);
+			return true;
+		}else{
+		         echo '对不起,没有可下载的文件';
+		}
+	}
+
+	/**
+	* Updates a particular model.
+	* @param integer $id the ID of the model to be updated
+	 */
+	public function actionRename($id)
+	{
+		$model=$this->loadModel($id);
+		$this->oldFile = $model->picture;
+	}
+	
+	/**
+	* Deletes a particular model.
+	* @param integer $id the ID of the model to be deleted
+	 */
+	public function actionDelete($id)
+	{
+		$model = $this->loadModel($id);
+		$this->delFile($model->picture);
+		$model->delete();
+
+		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+		if(!isset($_GET['ajax']))
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+	}
+
+	/**
+	 * 复制
+	 * @return [type] [description]
+	 */
+	public function actionCopy()
+	{
+
+	}
+
+	/**
+	 * 移动
+	 * @return [type] [description]
+	 */
+	public function actionMove()
+	{
+
 	}
 
 }

@@ -2135,3 +2135,809 @@ Stack trace:
 REQUEST_URI=/HuaWei/index.php/site/transportationUpload
 HTTP_REFERER=http://localhost/HuaWei/index.php/site/classifyOthers
 ---
+2014/07/22 07:40:42 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and type=1 and locate=0 order by create_time desc' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and type=1 and locate=0 order by create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (82)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 07:40:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and type=1 and locate=0 order by create_time desc' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and type=1 and locate=0 order by create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/22 07:44:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and rel.type=1 and rel.locate=0 order by folder.create_time desc' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and rel.type=1 and rel.locate=0 order by folder.create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (82)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 07:44:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and rel.type=1 and rel.locate=0 order by folder.create_time desc' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and rel.type=1 and rel.locate=0 order by folder.create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/22 07:44:48 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and rel.type=1 and rel.locate=0 order by folder.create_time desc' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and rel.type=1 and rel.locate=0 order by folder.create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (82)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 07:44:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and rel.type=1 and rel.locate=0 order by folder.create_time desc' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and rel.type=1 and rel.locate=0 order by folder.create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/22 07:44:57 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and rel.type=1 and rel.locate=0' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and rel.type=1 and rel.locate=0.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (82)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 07:44:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and rel.type=1 and rel.locate=0' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and rel.type=1 and rel.locate=0' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/22 07:44:58 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and rel.type=1 and rel.locate=0' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and rel.type=1 and rel.locate=0.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (82)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 07:44:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and rel.type=1 and rel.locate=0' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and rel.type=1 and rel.locate=0' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/22 07:45:08 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and r.type=0 and r.locate=0 order by f.create_time desc' at line 1. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,s.file_type,f.create_time from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id= and r.type=0 and r.locate=0 order by f.create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (84)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 07:45:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and r.type=0 and r.locate=0 order by f.create_time desc' at line 1. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,s.file_type,f.create_time from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id= and r.type=0 and r.locate=0 order by f.create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(84): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/22 07:45:09 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and r.type=0 and r.locate=0 order by f.create_time desc' at line 1. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,s.file_type,f.create_time from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id= and r.type=0 and r.locate=0 order by f.create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (84)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 07:45:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and r.type=0 and r.locate=0 order by f.create_time desc' at line 1. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,s.file_type,f.create_time from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id= and r.type=0 and r.locate=0 order by f.create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(84): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/22 07:45:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and type=1 and locate=0 order by create_time desc' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and type=1 and locate=0 order by create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (82)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 07:45:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and type=1 and locate=0 order by create_time desc' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and type=1 and locate=0 order by create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/22 07:45:23 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and type=1 and locate=0 order by create_time desc' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and type=1 and locate=0 order by create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (82)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 07:45:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and type=1 and locate=0 order by create_time desc' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and type=1 and locate=0 order by create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(82): CActiveRecord->findAllBySql('select folder.f...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/22 07:45:32 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by u.create_time desc' at line 1. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,s.file_type,u.create_time from (file as f  left join upload as u on f.file_id=u.file_id) left join file_sort as s on f.file_id=s.file_id where u.user_id= order by u.create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (158)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 07:45:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by u.create_time desc' at line 1. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,s.file_type,u.create_time from (file as f  left join upload as u on f.file_id=u.file_id) left join file_sort as s on f.file_id=s.file_id where u.user_id= order by u.create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(158): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionTransportationUpload()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('transportationU...')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/transporta...')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/transportationUpload
+---
+2014/07/22 08:05:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by u.create_time desc' at line 1. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,s.file_type,u.create_time from (file as f  left join upload as u on f.file_id=u.file_id) left join file_sort as s on f.file_id=s.file_id where u.user_id= order by u.create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (180)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 08:05:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by u.create_time desc' at line 1. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,s.file_type,u.create_time from (file as f  left join upload as u on f.file_id=u.file_id) left join file_sort as s on f.file_id=s.file_id where u.user_id= order by u.create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(180): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionTransportationUpload()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('transportationU...')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/transporta...')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/transportationUpload
+---
+2014/07/22 08:05:39 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by u.create_time desc' at line 1. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,s.file_type,u.create_time from (file as f  left join upload as u on f.file_id=u.file_id) left join file_sort as s on f.file_id=s.file_id where u.user_id= order by u.create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (180)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 08:05:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by u.create_time desc' at line 1. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,s.file_type,u.create_time from (file as f  left join upload as u on f.file_id=u.file_id) left join file_sort as s on f.file_id=s.file_id where u.user_id= order by u.create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(180): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionTransportationUpload()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('transportationU...')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/transporta...')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/transportationUpload
+---
+2014/07/22 08:05:40 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by u.create_time desc' at line 1. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,s.file_type,u.create_time from (file as f  left join upload as u on f.file_id=u.file_id) left join file_sort as s on f.file_id=s.file_id where u.user_id= order by u.create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (180)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 08:05:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by u.create_time desc' at line 1. The SQL statement executed was: select f.file_id,f.file_name,f.file_size,s.file_type,u.create_time from (file as f  left join upload as u on f.file_id=u.file_id) left join file_sort as s on f.file_id=s.file_id where u.user_id= order by u.create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(180): CActiveRecord->findAllBySql('select f.file_i...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionTransportationUpload()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('transportationU...')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/transporta...')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/transportationUpload
+---
+2014/07/22 08:05:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and type=1 and locate=0 order by create_time desc' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and type=1 and locate=0 order by create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (104)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 08:05:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and type=1 and locate=0 order by create_time desc' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and type=1 and locate=0 order by create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(104): CActiveRecord->findAllBySql('select folder.f...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php
+---
+2014/07/22 09:58:42 [error] [php] Undefined variable: _FILE (/var/www/html/HuaWei/protected/controllers/SiteController.php:226)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/upload
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (226)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 11:49:41 [error] [php] Trying to get property of non-object (/var/www/html/HuaWei/protected/controllers/SiteController.php:289)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/upload
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (289)
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (278)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 12:06:57 [error] [exception.CException] exception 'CException' with message 'Property "File.upload" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(161): CComponent->__set('upload', '1_1406002017.pn...')
+#1 /var/www/html/HuaWei/protected/controllers/SiteController.php(297): CActiveRecord->__set('upload', '1_1406002017.pn...')
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(282): SiteController->UploadName(Object(File), 'upload')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionUpload()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('upload')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/upload')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/upload
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/test
+---
+2014/07/22 12:07:57 [error] [php] Undefined index: upload (/var/www/html/HuaWei/protected/controllers/SiteController.php:276)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/upload
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (276)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 12:08:40 [error] [php] Undefined index: file_name (/var/www/html/HuaWei/protected/controllers/SiteController.php:276)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/upload
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (276)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 12:10:56 [error] [exception.CException] exception 'CException' with message 'Property "File.fileName" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('fileName')
+#1 /var/www/html/HuaWei/protected/controllers/SiteController.php(297): CActiveRecord->__get('fileName')
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(282): SiteController->UploadName(Object(File), 'file_name')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionUpload()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('upload')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/upload')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/upload
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/test
+---
+2014/07/22 12:58:58 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "UploadName".' in /var/www/html/HuaWei/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/HuaWei/protected/controllers/SiteController.php(279): CComponent->__call('UploadName', Array)
+#1 /var/www/html/HuaWei/protected/controllers/SiteController.php(279): SiteController->UploadName(Object(File), 'file_name')
+#2 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionUpload()
+#3 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('upload')
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/upload')
+#8 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/HuaWei/index.php/site/upload
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/test
+---
+2014/07/22 12:59:09 [error] [exception.CException] exception 'CException' with message 'File and its behaviors do not have a method or closure named "uploadName".' in /var/www/html/HuaWei/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(227): CComponent->__call('uploadName', Array)
+#1 /var/www/html/HuaWei/protected/controllers/SiteController.php(279): CActiveRecord->__call('uploadName', Array)
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(279): File->uploadName(Object(File), 'file_name')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionUpload()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('upload')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/upload')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/upload
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/test
+---
+2014/07/22 13:02:15 [error] [php] Illegal offset type in isset or empty (/var/www/html/HuaWei/framework/web/CUploadedFile.php:86)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionUpload()
+#1 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#3 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#4 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#5 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/upload
+in /var/www/html/HuaWei/protected/models/File.php (120)
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (279)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 13:02:37 [error] [php] Undefined property: stdClass::$file_name (/var/www/html/HuaWei/protected/models/File.php:124)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/upload
+in /var/www/html/HuaWei/protected/models/File.php (124)
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (279)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 13:05:19 [error] [php] Missing argument 1 for CUploadedFile::getInstanceByName(), called in /var/www/html/HuaWei/protected/models/File.php on line 120 and defined (/var/www/html/HuaWei/framework/web/CUploadedFile.php:81)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionUpload()
+#1 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#3 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#4 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#5 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/upload
+in /var/www/html/HuaWei/protected/models/File.php (120)
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (279)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 13:05:33 [error] [php] Missing argument 1 for CUploadedFile::getInstanceByName(), called in /var/www/html/HuaWei/protected/models/File.php on line 120 and defined (/var/www/html/HuaWei/framework/web/CUploadedFile.php:81)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionUpload()
+#1 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/HuaWei/framework/web/CController.php(286): SiteController->runAction()
+#3 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#4 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#5 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/upload
+in /var/www/html/HuaWei/protected/models/File.php (120)
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (279)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/22 14:02:21 [error] [exception.CException] exception 'CException' with message 'Property "File.file" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('file')
+#1 /var/www/html/HuaWei/protected/controllers/SiteController.php(277): CActiveRecord->__get('file')
+#2 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionUpload()
+#3 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('upload')
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/upload')
+#8 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/HuaWei/index.php/site/upload
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/test
+---
+2014/07/23 15:37:53 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and type=1 and locate=0 order by create_time desc' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and type=1 and locate=0 order by create_time desc.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (105)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/23 15:37:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and type=1 and locate=0 order by create_time desc' at line 1. The SQL statement executed was: select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id= and type=1 and locate=0 order by create_time desc' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1581): CDbCommand->queryAll()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(105): CActiveRecord->findAllBySql('select folder.f...')
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionHomePage()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('homePage')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/homePage')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/homePage
+---
+2014/07/23 15:46:22 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/html/HuaWei/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/html/HuaWei/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/HuaWei/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('test')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/test')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/test
+---
+2014/07/23 16:08:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/html/HuaWei/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/html/HuaWei/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/HuaWei/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('upload')
+#8 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/upload')
+#9 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/HuaWei/index.php/site/upload
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/test
+---
+2014/07/23 16:16:05 [error] [php] include(Upload.php): failed to open stream: No such file or directory (/var/www/html/HuaWei/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/html/HuaWei/protected/controllers/SiteController.php(263): spl_autoload_call()
+#1 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionUpload()
+#2 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#4 /var/www/html/HuaWei/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/html/HuaWei/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#7 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#10 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#11 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/upload
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (263)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/23 17:01:58 [error] [exception.CException] exception 'CException' with message 'Property "File.suffix" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('suffix')
+#1 /var/www/html/HuaWei/protected/models/File.php(141): CActiveRecord->__get('suffix')
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(264): File->changeName()
+#3 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionUpload()
+#4 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/HuaWei/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/HuaWei/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/upload')
+#14 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/HuaWei/index.php/site/upload
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/test
+---
+2014/07/23 17:13:26 [error] [php] chmod(): No such file or directory (/var/www/html/HuaWei/protected/models/File.php:156)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionUpload()
+#1 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#3 /var/www/html/HuaWei/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/html/HuaWei/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#6 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#9 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#10 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/upload
+in /var/www/html/HuaWei/protected/models/File.php (156)
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (265)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/23 17:17:53 [error] [php] chmod(): No such file or directory (/var/www/html/HuaWei/protected/models/File.php:156)
+Stack trace:
+#0 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(49): SiteController->actionUpload()
+#1 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#3 /var/www/html/HuaWei/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/html/HuaWei/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#6 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/html/HuaWei/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#9 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): SiteController->run()
+#10 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/html/HuaWei/index.php(13): CWebApplication->run()
+REQUEST_URI=/HuaWei/index.php/site/upload
+in /var/www/html/HuaWei/protected/models/File.php (156)
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (265)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/23 17:53:34 [error] [exception.CException] exception 'CException' with message 'Property "FileRelation.file_name" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('file_name')
+#1 /var/www/html/HuaWei/protected/controllers/SiteController.php(297): CActiveRecord->__get('file_name')
+#2 [internal function]: SiteController->actionDownload('24')
+#3 /var/www/html/HuaWei/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#4 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/HuaWei/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/HuaWei/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('download')
+#14 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/download')
+#15 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/HuaWei/index.php/site/download/24
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/test
+---
+2014/07/23 17:57:04 [error] [exception.CException] exception 'CException' with message 'Property "FileRelation.file_name" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('file_name')
+#1 /var/www/html/HuaWei/protected/controllers/SiteController.php(296): CActiveRecord->__get('file_name')
+#2 [internal function]: SiteController->actionDownload('24')
+#3 /var/www/html/HuaWei/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#4 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/HuaWei/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/HuaWei/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('download')
+#14 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/download')
+#15 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/HuaWei/index.php/site/download/24
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/test
+---
+2014/07/23 17:57:20 [error] [exception.CException] exception 'CException' with message 'Property "FileRelation.file_name" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('file_name')
+#1 /var/www/html/HuaWei/framework/base/CModel.php(596): CActiveRecord->__get('file_name')
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(296): CModel->offsetGet('file_name')
+#3 [internal function]: SiteController->actionDownload('24')
+#4 /var/www/html/HuaWei/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#5 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#6 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/HuaWei/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/html/HuaWei/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('download')
+#15 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/download')
+#16 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/HuaWei/index.php/site/download/24
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/test
+---
+2014/07/23 17:57:24 [error] [exception.CException] exception 'CException' with message 'Property "FileRelation.file_name" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('file_name')
+#1 /var/www/html/HuaWei/framework/base/CModel.php(596): CActiveRecord->__get('file_name')
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(296): CModel->offsetGet('file_name')
+#3 [internal function]: SiteController->actionDownload('24')
+#4 /var/www/html/HuaWei/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#5 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#6 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/HuaWei/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/html/HuaWei/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('download')
+#15 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/download')
+#16 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/HuaWei/index.php/site/download/24
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/test
+---
+2014/07/23 17:57:41 [error] [exception.CException] exception 'CException' with message 'Property "FileRelation.file_name" is not defined.' in /var/www/html/HuaWei/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(145): CComponent->__get('file_name')
+#1 /var/www/html/HuaWei/protected/controllers/SiteController.php(296): CActiveRecord->__get('file_name')
+#2 [internal function]: SiteController->actionDownload('24')
+#3 /var/www/html/HuaWei/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#4 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#5 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/HuaWei/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/HuaWei/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('download')
+#14 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/download')
+#15 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/HuaWei/index.php/site/download/24
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/test
+---
+2014/07/23 17:59:47 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause'. The SQL statement executed was: select * from file where user_id=1 and file_id=24.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (295)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/23 17:59:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause'. The SQL statement executed was: select * from file where user_id=1 and file_id=24' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1558): CDbCommand->queryRow()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(295): CActiveRecord->findBySql('select * from f...')
+#3 [internal function]: SiteController->actionDownload('24')
+#4 /var/www/html/HuaWei/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#5 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#6 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/HuaWei/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/html/HuaWei/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('download')
+#15 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/download')
+#16 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/HuaWei/index.php/site/download/24
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/test
+---
+2014/07/23 17:59:51 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause'. The SQL statement executed was: select * from file where user_id=1 and file_id=24.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (295)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/23 17:59:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause'. The SQL statement executed was: select * from file where user_id=1 and file_id=24' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1558): CDbCommand->queryRow()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(295): CActiveRecord->findBySql('select * from f...')
+#3 [internal function]: SiteController->actionDownload('24')
+#4 /var/www/html/HuaWei/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#5 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#6 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/HuaWei/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/html/HuaWei/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('download')
+#15 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/download')
+#16 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/HuaWei/index.php/site/download/24
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/test
+---
+2014/07/23 18:02:17 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'relation.file_id' in 'on clause'. The SQL statement executed was: select * from file_relation inner join file on relation.file_id=file.file_id where user_id=1.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (295)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/23 18:02:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'relation.file_id' in 'on clause'. The SQL statement executed was: select * from file_relation inner join file on relation.file_id=file.file_id where user_id=1' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1558): CDbCommand->queryRow()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(295): CActiveRecord->findBySql('select * from f...')
+#3 [internal function]: SiteController->actionDownload('24')
+#4 /var/www/html/HuaWei/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#5 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#6 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/HuaWei/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/html/HuaWei/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('download')
+#15 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/download')
+#16 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/HuaWei/index.php/site/download/24
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/test
+---
+2014/07/23 18:13:10 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'file_id' in where clause is ambiguous. The SQL statement executed was: select * from file_relation inner join file on file_relation.file_id=file.file_id where user_id=1 and file_id=24.
+in /var/www/html/HuaWei/protected/controllers/SiteController.php (295)
+in /var/www/html/HuaWei/index.php (13)
+2014/07/23 18:13:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'file_id' in where clause is ambiguous. The SQL statement executed was: select * from file_relation inner join file on file_relation.file_id=file.file_id where user_id=1 and file_id=24' in /var/www/html/HuaWei/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/HuaWei/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /var/www/html/HuaWei/framework/db/ar/CActiveRecord.php(1558): CDbCommand->queryRow()
+#2 /var/www/html/HuaWei/protected/controllers/SiteController.php(295): CActiveRecord->findBySql('select * from f...')
+#3 [internal function]: SiteController->actionDownload('24')
+#4 /var/www/html/HuaWei/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#5 /var/www/html/HuaWei/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#6 /var/www/html/HuaWei/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/HuaWei/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/html/HuaWei/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /var/www/html/HuaWei/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /var/www/html/HuaWei/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /var/www/html/HuaWei/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/html/HuaWei/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/HuaWei/framework/web/CWebApplication.php(282): CController->run('download')
+#15 /var/www/html/HuaWei/framework/web/CWebApplication.php(141): CWebApplication->runController('site/download')
+#16 /var/www/html/HuaWei/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/html/HuaWei/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/HuaWei/index.php/site/download/24
+HTTP_REFERER=http://localhost/HuaWei/index.php/site/test
+---
