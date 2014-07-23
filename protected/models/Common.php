@@ -65,7 +65,7 @@ class Common {
 	 */
 	public static function getFileType($type)
 	{
-		$doc = array('txt','doc','xls','xml','html','htm','xlt','csv','xlw','wk4','wk3','wk1','wd1','wks','wq1. slk','sla','ppt','pps','ppa','dot','rft','wps','doxc','pdf');
+		$doc = array('txt','doc','xls','xml','html','htm','xlt','csv','xlw','wk4','wk3','wk1','wd1','wks','wq1. slk','sla','ppt','pps','ppa','dot','rft','wps','doxc','docx','pdf');
 		$pic = array('bmp','jpg','png','tiff','gif','pcx','tga','exif','fpx','svg','psd','cdr','pcd','dxf','ufo','eps','ai','raw');
 		$music = array('mp3','ogg','wmv','wma','aiff','midi','vqf','aac','flac','tak','tta','wv');
 		$video = array('avi','mp4','rmvb','mov','asf','navi','3gp','mkv','divx','flv');
