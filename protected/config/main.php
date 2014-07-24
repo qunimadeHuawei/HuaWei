@@ -80,8 +80,8 @@ return array(
 				/*
 				array(
 					'class'=>'CWebLogRoute',
-				),
-				*/
+				),*/
+				
 			),
 		),
 	),

@@ -1,32 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "file".
+ * This is the model class for table "download".
  *
- * The followings are the available columns in table 'file':
+ * The followings are the available columns in table 'download':
+ * @property integer $download_id
+ * @property integer $user_id
  * @property integer $file_id
- * @property string $file_name
- * @property string $file_path
- * @property integer $file_size
  * @property string $create_time
  */
-class File extends CActiveRecord
+class Download extends CActiveRecord
 {
-	public static $doc=1;
-	public static $pic=2;
-	public static $music=3;
-	public static $video=4;
-	public static $others=5;
-
-	protected $file;   	//保存上传文件信息 CUploadedFile类
-	public $file_type;
-
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'file';
+		return 'download';
 	}
 
 	/**
@@ -37,13 +27,12 @@ class File extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('file_name, file_path, file_size', 'required'),
-			array('file_size', 'numerical', 'integerOnly'=>true),
-			array('file_name, file_path', 'length', 'max'=>100),
+			array('user_id, file_id', 'required'),
+			array('user_id, file_id', 'numerical', 'integerOnly'=>true),
 			array('create_time', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('file_id, file_name, file_path, file_size, create_time', 'safe', 'on'=>'search'),
+			array('download_id, user_id, file_id, create_time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,10 +53,9 @@ class File extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'download_id' => 'Download',
+			'user_id' => 'User',
 			'file_id' => 'File',
-			'file_name' => 'File Name',
-			'file_path' => 'File Path',
-			'file_size' => 'File Size',
 			'create_time' => 'Create Time',
 		);
 	}
@@ -90,10 +78,9 @@ class File extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('download_id',$this->download_id);
+		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('file_id',$this->file_id);
-		$criteria->compare('file_name',$this->file_name,true);
-		$criteria->compare('file_path',$this->file_path,true);
-		$criteria->compare('file_size',$this->file_size);
 		$criteria->compare('create_time',$this->create_time,true);
 
 		return new CActiveDataProvider($this, array(
@@ -105,7 +92,7 @@ class File extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return File the static model class
+	 * @return Download the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -125,51 +112,4 @@ class File extends CActiveRecord
 			return false;
 		} 			
 	}
-
-	/**
-	* 为上传文件命名
-	* @param $myAttribute 上传文件的字段名
-	 */
-	public function changeName()
-	{
-		$this->file = CUploadedFile::getInstanceByName('file');  //file为字段，也是input标签的name
-		$suffix = $this->file->getExtensionName();		//获取文件后缀名
-		$this->file_type = $suffix;
-		($suffix != null) ? $suffix ='.'.$suffix : '';
-		$this->file_name = $this->file->getName();
-		$this->file_size = $this->file->getSize();
-		$this->file_path = Yii::app()->user->id.'_'.time().''.$suffix;            //$this->fileName 在下面moveFile方法中要用
-	}
-	/**
-	* 移动上传文件至指定路径
-	* $dir 格式示例：  movefile('/var/www/file/')
-	* 不传参数默认为 files目录
-	 */
-	public function moveFile($dir='')
-	{
-		if(is_object($this->file) && get_class($this->file)==='CUploadedFile'){
-			if($dir=='') 
-				$dir = Yii::app()->basePath."/../files/".$this->file_path;
-			else 
-				$dir .= $this->file_path;
-			$this->file->saveAs($dir);
-			chmod($dir, 0776);
-			return true;
-		}else{
-			return false;
-		}
-	}
-	/**
-	* 删除文件
-	* $file 文件名
-	* $dir 文件所在路径名
-	 */
-	public function delFile()
-	{
-		$dir = Yii::app()->basePath."/../files/".$this->file_path;
-		if(file_exists($dir)){
-			unlink($dir);
-		}
-	}
-
 }
