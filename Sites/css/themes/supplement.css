@@ -20,6 +20,9 @@ body {
 /*---------------------------------------------------------
 					mainContent
 --------------------------------------------------------------*/
+#mainContent ul li {
+	position: relative;
+}
 #mainContent ul li a {
 	padding-top: 17px;
 }
@@ -93,3 +96,29 @@ background-image: none; /*取消nav 的默认背景图片*/
 #function ul li:active {
 	background-color: #55b8f1;
 }
+/*------------------------------------------------------------
+				注册
+-------------------------------------------------------------*/
+#header a.registered {
+	position: absolute;
+	top: 13px;
+	left: 80%;
+	padding: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-shadow: none;
+	color: #fff;
+	border: 1px solid #3388cc;
+}
+#mainContent label.logIn_form_left {
+	display: inline-block;
+	width: 30%;
+}
+#mainContent input {
+	line-height: 1em;
+}
+.ui-input-text input, .ui-input-search input {
+	min-height: 1em;  /*改变jqueryMobile默认的最小高度度*/
+}
+
+

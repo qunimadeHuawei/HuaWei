@@ -15,15 +15,17 @@ $(document).on("pageinit",".allPage",function(){
 		};
 	});
 	//以上代码实现点击时的#function的弹框效果
-
-
-function showFileName()
-      {
-        var file = document.getElementById("upload");
-        for(var i = 0, j = file.files.length; i < j; i++)
-            {
-               alert(file.files[i].name);
-                            };
-            };
+/*	$("mainContent ul li .tap_icon").on("tap",function(){
+		$("#footer").hide();
+		$('#function').slideDown();
+		alert('hi');
+		console.log('aaa');
+	})想去掉after图片但是没成功*/
 	$("#header #upload").hide();
+	$("#header .tap").on("tap",function(){
+		$("#header #upload").click();
+	}) //点击上传按钮时上传文件
+//	$("#header .tap").on("tap",function(){
+
+//	})
 });
