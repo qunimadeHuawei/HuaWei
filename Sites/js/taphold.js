@@ -14,6 +14,8 @@ $(document).on("pageinit",".allPage",function(){
 			count=0;
 		};
 	});
+	$("#mainContent ul li a.floder:after").css("color","green");
+	console.log('aaa');
 	//以上代码实现点击时的#function的弹框效果
 /*	$("mainContent ul li .tap_icon").on("tap",function(){
 		$("#footer").hide();
