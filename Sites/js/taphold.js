@@ -1,20 +1,32 @@
 $(document).on("pageinit",".allPage",function(){
+	var whichTaped;
 	var count=0;
+	var url = $("#url").attr("value");
 	$("#function").hide();
 	$("#mainContent ul li a").on("taphold",function(){
+		$(this).find("img.rightClick").attr("src",url+"images/arrow-d.png");
 		$("#footer").hide();
 		$('#function').slideDown();
+		whichTaped = $(this).find('h2').html();
 		count++;//count==1
 	});
 	$("#mainContent ul li a").on("tap",function(){
 		count++; //实现再次tap即消去#function的效果,count==2,再次点击时count==3
+		whichTaped = $(this).find('h2').html();
 		if(count>2){
-			$('#footer').slideDown(1000);
+			$(this).parent().find("img.rightClick").attr("src",url+"images/arrow-r.png");
+			console.log('asa');
+			$('#footer').slideDown();
 			$("#function").hide();
 			count=0;
 		};
 	});
-	$("#mainContent ul li a.floder:after").css("color","green");
+	$("img.rightClick").on("tap",function(){
+		$(this).attr("src",url+"images/arrow-d.png");
+		$("#footer").hide();
+		$('#function').slideDown();
+		count++;
+	})
 	console.log('aaa');
 	//以上代码实现点击时的#function的弹框效果
 /*	$("mainContent ul li .tap_icon").on("tap",function(){
@@ -30,4 +42,10 @@ $(document).on("pageinit",".allPage",function(){
 //	$("#header .tap").on("tap",function(){
 
 //	})
+
+
+
+//	$('input#chongmm').attr("placeholder",whichTaped);
+//	console.log('jnn');
+//	$('#chongmm').focus();
 });

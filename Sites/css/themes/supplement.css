@@ -29,9 +29,6 @@ body {
 #mainContent ul li a.floder {
 	line-height: 48px;
 }
-#mainContent ul li a.floder:after {
-	content: "nihao";
-}
 .ui-listview .ui-li-has-thumb>img:first-child, .ui-listview .ui-li-has-thumb>.ui-btn>img:first-child, .ui-listview .ui-li-has-thumb .ui-li-thumb {
 position: absolute;
 left: 20px;
@@ -40,8 +37,15 @@ max-height: 5em;
 max-width: 5em;
 } /*控制li左边img的位置*/
 .ui-btn-icon-right:after {
-right: 1em;
+	display: none; 
+	right: 1em;
 } /*控制背景图标位置*/
+/*控制右边可点击的图标*/
+.rightClick {
+	position: absolute;
+	right: 1em;
+	top: 38%;
+}
 /*--------------------------------------------------------------
 					footer
 ---------------------------------------------------------------*/
@@ -123,5 +127,23 @@ background-image: none; /*取消nav 的默认背景图片*/
 .ui-input-text input, .ui-input-search input {
 	min-height: 1em;  /*改变jqueryMobile默认的最小高度度*/
 }
-
+.ui-input-btn input {
+	opacity: 1;
+	font-size: 20px;
+	text-indent: 0;
+	color: #fff;
+} /*改变submit的默认样式*/
+input.login {
+	background-color: rgb(115, 159, 224);
+}
+/*--------------------------------------------------------------
+				移动和复制页面
+----------------------------------------------------------------*/
+p.noFolder {
+	position: absolute;
+	top: 50%;
+	left: 13%;
+	color:#aaa;
+	font-size: 16px;
+}
 

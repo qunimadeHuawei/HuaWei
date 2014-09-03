@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <div value="<?php echo Yii::app()->baseUrl; ?>/Sites/" id="url"></div>
   <meta charset="utf-8">
   <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/Sites/css/reset.css">

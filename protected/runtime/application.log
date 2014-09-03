@@ -30,3 +30,262 @@ Stack trace:
 REQUEST_URI=/learngit/index.php/site/login
 HTTP_REFERER=http://localhost/learngit/index.php/site/login
 ---
+2014/09/03 07:54:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/yuan.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/yuan.png')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/yuan.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 07:56:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/yuan.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/yuan.png')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/yuan.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 07:56:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/yuan.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/yuan.png')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/yuan.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 07:58:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/yuan.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/yuan.png')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/yuan.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 07:58:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/yuan.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/yuan.png')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/yuan.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 07:58:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/arrow-r.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrow-r....')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/arrow-r.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 07:59:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/arrow-r.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrow-r....')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/arrow-r.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 08:00:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/arrow-r.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrow-r....')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/arrow-r.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 08:00:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/arrow-r.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrow-r....')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/arrow-r.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 08:00:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/arrow-r.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrow-r....')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/arrow-r.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 08:00:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/arrow-r.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrow-r....')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/arrow-r.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 08:00:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/arrow-r.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrow-r....')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/arrow-r.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 08:00:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/arrow-r.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrow-r....')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/arrow-r.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 08:00:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/arrow-r.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrow-r....')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/arrow-r.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 08:00:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/arrow-r.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrow-r....')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/arrow-r.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 08:00:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/arrow-r.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrow-r....')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/arrow-r.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 08:00:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/arrow-r.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrow-r....')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/arrow-r.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 08:01:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/arrow-r.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrow-r....')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/arrow-r.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 08:01:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/arrow-r.png".' in E:\xampp\htdocs\learngit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrow-r....')
+#1 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/learngit/index.php/images/arrow-r.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/03 09:10:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "undefinedimages".' in E:\xampp\htdocs\learngit\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(270): CController->missingAction('undefinedimages')
+#1 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('undefinedimages')
+#2 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/undefinedi...')
+#3 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/learngit/index.php/site/undefinedimages/arrow-d.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/classifyDoc
+---
+2014/09/03 09:10:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "undefinedimages".' in E:\xampp\htdocs\learngit\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(270): CController->missingAction('undefinedimages')
+#1 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('undefinedimages')
+#2 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/undefinedi...')
+#3 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/learngit/index.php/site/undefinedimages/arrow-d.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/classifyDoc
+---
+2014/09/03 09:10:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "undefinedimages".' in E:\xampp\htdocs\learngit\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(270): CController->missingAction('undefinedimages')
+#1 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('undefinedimages')
+#2 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/undefinedi...')
+#3 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/learngit/index.php/site/undefinedimages/arrow-d.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/classifyDoc
+---
+2014/09/03 09:10:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "undefinedimages".' in E:\xampp\htdocs\learngit\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(270): CController->missingAction('undefinedimages')
+#1 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('undefinedimages')
+#2 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/undefinedi...')
+#3 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/learngit/index.php/site/undefinedimages/arrow-d.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/classifyDoc
+---
+2014/09/03 09:11:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "undefinedimages".' in E:\xampp\htdocs\learngit\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(270): CController->missingAction('undefinedimages')
+#1 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('undefinedimages')
+#2 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/undefinedi...')
+#3 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/learngit/index.php/site/undefinedimages/arrow-d.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/classifyDoc
+---
+2014/09/03 09:11:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "undefinedimages".' in E:\xampp\htdocs\learngit\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(270): CController->missingAction('undefinedimages')
+#1 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('undefinedimages')
+#2 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/undefinedi...')
+#3 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/learngit/index.php/site/undefinedimages/arrow-d.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/classifyDoc
+---
+2014/09/03 09:12:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "undefinedimages".' in E:\xampp\htdocs\learngit\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(270): CController->missingAction('undefinedimages')
+#1 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('undefinedimages')
+#2 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/undefinedi...')
+#3 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/learngit/index.php/site/undefinedimages/arrow-r.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/classifyDoc
+---
+2014/09/03 09:12:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "undefinedimages".' in E:\xampp\htdocs\learngit\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(270): CController->missingAction('undefinedimages')
+#1 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('undefinedimages')
+#2 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/undefinedi...')
+#3 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/learngit/index.php/site/undefinedimages/arrow-r.png
+HTTP_REFERER=http://localhost/learngit/index.php/site/classifyDoc
+---

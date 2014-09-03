@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <div value="<?php echo Yii::app()->baseUrl; ?>/Sites/" id="url"></div>
   <meta charset="utf-8">
   <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/Sites/css/reset.css">
@@ -43,7 +44,7 @@
         <li><a href="#" class="floder"><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/homePage1_floder.png" width="38" height="42"><?php echo $tmp_folder['folder_name']; ?></a></li>
       <?php }?>
       <?php foreach($file as $tmp_file){?>
-        <li><a href="#"><img src="<?php  echo Common::getPicPath($tmp_file->file_type); ?>" width="38" height="42"><h2><?php echo $tmp_file->file_name; ?></h2><p><?php echo Common::fileSize($tmp_file->file_size); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo Common::cutDateTime($tmp_file->create_time); ?></p></a></li>
+        <li><a href="#"><img src="<?php  echo Common::getPicPath($tmp_file->file_type); ?>" width="38" height="42"><h2><?php echo $tmp_file->file_name; ?></h2><p><?php echo Common::fileSize($tmp_file->file_size); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo Common::cutDateTime($tmp_file->create_time); ?></p></a><img class="rightClick" src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/arrow-r.png"></li>
       <?php }?>
     <ul>
   </div>
@@ -65,12 +66,32 @@
         <li><a href="">下载<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon1.png"></a></li>
         <li><a href="">复制<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon2.png"></a></li>
         <li><a href="">移动<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon3.png"></a></li>
-        <li><a href="">重命名<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon4.png"></a></li>
+        <li><a href="#rename" data-rel="dialog">重命名<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon4.png"></a></li>
         <li><a href="">删除<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon5.png"></a></li>
       </ul>
-    </div>
+    </div>  <!--添加点击重命名后弹出的表单-->
 </div> 
 <!--    footer ends here  -->
+  <div data-role="page" id="rename">
+    <form>
+      <div data-role="header">
+        <h2>重命名</h2>
+      </div>
+      <div data-role="content">
+        <input type="text" name="rename" id="chyongmm" placeholder="请输入新名字"/><!--暂时未能做成百度网盘的效果-->
+      </div>
+      <div data-role="footer">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#homePage"><input type="submit" data-inline="true" value="取消"></a></li><!--有点问题-->
+            <li><a href="#homePage"><input type="submit" data-inline="true" value="确定"></a></li>
+          </ul>
+        </div>
+      </div>
+    </form>
+
+
+  </div>
 
 </body>
 </html>
