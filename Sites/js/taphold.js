@@ -39,9 +39,8 @@ $(document).on("pageinit",".allPage",function(){
 	$("#header .tap").on("tap",function(){
 		$("#header #upload").click();
 	}) //点击上传按钮时上传文件
-//	$("#header .tap").on("tap",function(){
+    
 
-//	})
 
 
 

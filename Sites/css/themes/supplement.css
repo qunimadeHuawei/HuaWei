@@ -127,7 +127,7 @@ background-image: none; /*取消nav 的默认背景图片*/
 .ui-input-text input, .ui-input-search input {
 	min-height: 1em;  /*改变jqueryMobile默认的最小高度度*/
 }
-.ui-input-btn input {
+.ui-input-btn input#submit {
 	opacity: 1;
 	font-size: 20px;
 	text-indent: 0;

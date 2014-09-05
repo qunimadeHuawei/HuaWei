@@ -23,15 +23,19 @@
                alert(file.files[i].name);
                             };
             };
-            </script>
+             function formSubmit() 
+     {
+        document.getElementById("myForm").submit();
+     }
+</script>
 </head>
 <body>
 
 <div data-role="page" id="transportationListYun" class="allPage">
   <div data-role="header" data-position="fixed" id="header">
     <h1>传输列表</h1>
-    <form>
-      <input id="upload" type="file" method="post" enctype="multipart/form-data" value="上传">
+   <form id="myForm" action="<?php echo Yii::app()->createUrl('site/upload'); ?>" method="post" enctype="multipart/form-data">
+      <input id="upload" type="file"  value="上传" onchange="formSubmit()">
       <input class="tap" type="button" value="上传" data-inline="true" data-mini="true">
     </form>
     

@@ -30,10 +30,10 @@
 <div data-role="page" id="transportationListDelete" class="allPage" >
   <div data-role="header" data-position="fixed" id="header">
     <h1>传输列表</h1>
-    <form>
+<!--<form>
       <input id="upload" type="file" method="post" enctype="multipart/form-data" value="全选">
       <input class="tap" type="button" value="全选" data-inline="true" data-mini="true">
-    </form>
+    </form> -->
     
     <div data-role="navbar" style="background:url(<?php echo Yii::app()->baseUrl; ?>/Sites/images/border_top.png) bottom repeat-x;padding-bottom:6px;">
       <ul>
