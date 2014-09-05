@@ -345,9 +345,9 @@ class SiteController extends Controller
 			$fileVolume = Volume::model()->findByAttributes(array('user_id'=>Yii::app()->user->id));
 			$fileVolume->volume_used -= $file->file_size;
 			$fileVolume->save();
-			echo 'ture';	
+			$this->redirect(Yii::app()->user->returnUrl);
 		}else{
-			echo 'false';
+			echo "<script type='text/javascript'>	alert('Error! ');history.go(-1);	</script>";
 		}
 	}
 
@@ -355,8 +355,11 @@ class SiteController extends Controller
 	* Updates a particular model.
 	* @param integer $id the ID of the model to be updated
 	 */
-	public function actionRename($id)
+	public function actionRename()
 	{
+		if(isset($_POST['id']))
+			$id = $_POST['id'];
+		else return;
 		$file = File::model()->findBySql("select * from file_relation inner join file on file_relation.file_id=file.file_id where user_id=".Yii::app()->user->id." and file.file_id=".$id);
 		if($file != null)
 		{
