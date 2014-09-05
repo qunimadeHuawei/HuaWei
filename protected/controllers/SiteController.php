@@ -256,11 +256,12 @@ class SiteController extends Controller
 	 */
 	public function actionUpload()
 	{
+		//var_dump($_POST);die;
 		$file = new File;	
 		$fileRelation = new FileRelation;
 		$fileSort = new FileSort;
 		$fileVolume = Volume::model()->findByAttributes(array('user_id'=>Yii::app()->user->id));
-		$fileUpload = new Upload;	
+		$fileUpload = new Upload;
 		$file->changeName();
 		if($file->moveFile()){
 			$file->save();
@@ -280,9 +281,9 @@ class SiteController extends Controller
 			$fileUpload->user_id = Yii::app()->user->id;
 			$fileUpload->file_id = $file->file_id;
 			$fileUpload->save();
-			echo "ok";
+			$this->redirect(Yii::app()->user->returnUrl);
 		}else{
-			echo "false";
+			echo "<script type='text/javascript'>	alert('Error! ');history.go(-1);	</script>";
 		}
 	}
 
