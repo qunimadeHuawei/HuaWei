@@ -14,6 +14,11 @@ $(document).on("pageinit",".allPage",function(){
 		count++; //实现再次tap即消去#function的效果,count==2,再次点击时count==3
 		whichTaped = $(this).find('h2').html();
 		if(count>2){
+			$("#mainContent ul li a img.rightClick").each(function(){
+				if($(this).attr("src")=='url+"images/arrow-d.png"'){
+					$(this).attr("src",url+"images/arrow-d.png");
+				}
+			});
 			$(this).parent().find("img.rightClick").attr("src",url+"images/arrow-r.png");
 			console.log('asa');
 			$('#footer').slideDown();
