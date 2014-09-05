@@ -34,8 +34,8 @@
 <div data-role="page" id="homePage" class="allPage">
   <div data-role="header" data-position="fixed" id="header">
     <h1>华为网盘</h1>
-    <form id="myForm" action="<?php echo Yii::app()->createUrl('site/upload'); ?>" method="post" enctype="multipart/form-data">
-      <input id="upload" type="file"  value="上传" onchange="formSubmit()">
+    <form id="myForm"  enctype="multipart/form-data" action="<?php echo Yii::app()->createUrl('site/upload'); ?>" method="post">
+      <input id="upload" name="file" type="file" onchange="formSubmit()">
       <input class="tap" type="button" value="上传" data-inline="true" data-mini="true">
     </form>
   </div>
