@@ -357,3 +357,514 @@ Stack trace:
 REQUEST_URI=/learngit/index.php/site/logout
 HTTP_REFERER=http://localhost/learngit/index.php/site/set
 ---
+2014/09/05 12:39:22 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/05 13:04:09 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/05 13:04:10 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/05 13:04:11 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/05 13:05:29 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/05 13:05:52 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/05 13:06:05 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete
+---
+2014/09/05 13:08:06 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/05 13:09:23 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/05 13:12:58 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/05 13:13:05 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/05 13:13:12 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/05 13:14:23 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/05 15:22:01 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete/und...')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete/undefined
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/05 15:22:05 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete/und...')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete/undefined
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/05 15:30:46 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete/und...')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete/undefined
+HTTP_REFERER=http://localhost/learngit/index.php/site/homePage
+---
+2014/09/05 15:34:13 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete/30/...')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete/30/29
+HTTP_REFERER=http://localhost/learngit/index.php/site/delete/30
+---
+2014/09/05 15:34:22 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete/30/...')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete/30/29/28/29
+HTTP_REFERER=http://localhost/learngit/index.php/site/delete/30
+---
+2014/09/05 15:34:48 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete/29/...')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete/29/27
+HTTP_REFERER=http://localhost/learngit/index.php/site/delete/29
+---
+2014/09/05 15:34:52 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete/29/...')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete/29/27
+HTTP_REFERER=http://localhost/learngit/index.php/site/delete/29
+---
+2014/09/05 15:34:55 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete/29/...')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete/29/27
+HTTP_REFERER=http://localhost/learngit/index.php/site/delete/29
+---
+2014/09/05 15:36:38 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound. The SQL statement executed was: select * from file_relation inner join file on file_relation.file_id=file.file_id where user_id=1 and file.file_id=27?id=23.
+in E:\xampp\htdocs\learngit\protected\controllers\SiteController.php (340)
+in E:\xampp\htdocs\learngit\index.php (13)
+2014/09/05 15:36:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound. The SQL statement executed was: select * from file_relation inner join file on file_relation.file_id=file.file_id where user_id=1 and file.file_id=27?id=23' in E:\xampp\htdocs\learngit\framework\db\CDbCommand.php:543
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 E:\xampp\htdocs\learngit\framework\db\ar\CActiveRecord.php(1558): CDbCommand->queryRow()
+#2 E:\xampp\htdocs\learngit\protected\controllers\SiteController.php(340): CActiveRecord->findBySql('select * from f...')
+#3 [internal function]: SiteController->actionDelete('27?id=23')
+#4 E:\xampp\htdocs\learngit\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#5 E:\xampp\htdocs\learngit\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#13 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#15 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete')
+#16 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/learngit/index.php/site/delete?id=27?id=23
+HTTP_REFERER=http://localhost/learngit/index.php/site/delete?id=27
+---
+2014/09/05 15:52:31 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete/1/2...')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete/1/25
+HTTP_REFERER=http://localhost/learngit/index.php/site/delete/1
+---
+2014/09/05 15:52:43 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete/28/...')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete/28/26
+HTTP_REFERER=http://localhost/learngit/index.php/site/delete/28
+---
+2014/09/05 15:52:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete/28/...')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete/28/26
+HTTP_REFERER=http://localhost/learngit/index.php/site/delete/28
+---
+2014/09/05 15:52:51 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete/28/...')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete/28/11
+HTTP_REFERER=http://localhost/learngit/index.php/site/delete/28
+---
+2014/09/05 16:00:13 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete/
+---
+2014/09/05 16:01:24 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\learngit\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\learngit\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\learngit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 E:\xampp\htdocs\learngit\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\htdocs\learngit\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\htdocs\learngit\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\htdocs\learngit\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\xampp\htdocs\learngit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\xampp\htdocs\learngit\framework\web\CWebApplication.php(141): CWebApplication->runController('site/delete/12/...')
+#10 E:\xampp\htdocs\learngit\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\learngit\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/learngit/index.php/site/delete/12/3
+HTTP_REFERER=http://localhost/learngit/index.php/site/delete/12
+---

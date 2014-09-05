@@ -345,7 +345,7 @@ class SiteController extends Controller
 			$fileVolume = Volume::model()->findByAttributes(array('user_id'=>Yii::app()->user->id));
 			$fileVolume->volume_used -= $file->file_size;
 			$fileVolume->save();
-			$this->redirect(Yii::app()->user->returnUrl);
+			echo "<script type='text/javascript'>	history.go(-1);	</script>";
 		}else{
 			echo "<script type='text/javascript'>	alert('Error! ');history.go(-1);	</script>";
 		}
