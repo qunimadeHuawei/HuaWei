@@ -14,9 +14,9 @@ $(document).on("pageinit",".allPage",function(){
 		count++; //实现再次tap即消去#function的效果,count==2,再次点击时count==3
 		whichTaped = $(this).find('h2').html();
 		if(count>2){
-			$("#mainContent ul li a img.rightClick").each(function(){
-				if($(this).attr("src")=='url+"images/arrow-d.png"'){
-					$(this).attr("src",url+"images/arrow-d.png");
+			$(this).parent().parent().find("img.rightClick").each(function(){
+				if($(this).attr("src")==url+"images/arrow-d.png"){
+					$(this).attr("src",url+"images/arrow-r.png");
 				}
 			});
 			$(this).parent().find("img.rightClick").attr("src",url+"images/arrow-r.png");
@@ -30,7 +30,7 @@ $(document).on("pageinit",".allPage",function(){
 		$(this).attr("src",url+"images/arrow-d.png");
 		$("#footer").hide();
 		$('#function').slideDown();
-		count++;
+		count=2;
 	})
 	console.log('aaa');
 	//以上代码实现点击时的#function的弹框效果
