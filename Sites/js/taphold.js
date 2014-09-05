@@ -1,7 +1,11 @@
 $(document).on("pageinit",".allPage",function(){
 	var whichTaped;
+	var aValue;
+	var href;
+	href = $("#w").attr("href");
 	var count=0;
 	var url = $("#url").attr("value");
+	var Delete = "<?php echo Yii::app()->createUrl('site/delete'); ?>";
 	$("#function").hide();
 	$("#mainContent ul li a").on("taphold",function(){
 		$(this).find("img.rightClick").attr("src",url+"images/arrow-d.png");
@@ -14,9 +18,9 @@ $(document).on("pageinit",".allPage",function(){
 		count++; //实现再次tap即消去#function的效果,count==2,再次点击时count==3
 		whichTaped = $(this).find('h2').html();
 		if(count>2){
-			$("#mainContent ul li a img.rightClick").each(function(){
-				if($(this).attr("src")=='url+"images/arrow-d.png"'){
-					$(this).attr("src",url+"images/arrow-d.png");
+			$(this).parent().parent().find("img.rightClick").each(function(){
+				if($(this).attr("src")==url+"images/arrow-d.png"){
+					$(this).attr("src",url+"images/arrow-r.png");
 				}
 			});
 			$(this).parent().find("img.rightClick").attr("src",url+"images/arrow-r.png");
@@ -28,10 +32,13 @@ $(document).on("pageinit",".allPage",function(){
 	});
 	$("img.rightClick").on("tap",function(){
 		$(this).attr("src",url+"images/arrow-d.png");
+		aValue = $(this).parent().find("a").attr("value");//获取当前点击的元素的value
+	//	alert(aValue);
+		$("#function ul li a#w").attr("href",href+"/"+aValue);
 		$("#footer").hide();
 		$('#function').slideDown();
-		count++;
-	})
+		count=2;
+	});		
 	console.log('aaa');
 	//以上代码实现点击时的#function的弹框效果
 /*	$("mainContent ul li .tap_icon").on("tap",function(){
@@ -48,8 +55,12 @@ $(document).on("pageinit",".allPage",function(){
 
 
 
-
+/*重命名隐藏提交按钮*/
+	$("a#queding").on("tap",function(){
+		$("#hideSubmit").submit();
+	});
 //	$('input#chongmm').attr("placeholder",whichTaped);
 //	console.log('jnn');
 //	$('#chongmm').focus();
+
 });
