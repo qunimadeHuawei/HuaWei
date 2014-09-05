@@ -34,15 +34,14 @@
 	text-align: center;
 }
 #classification ul li a{
-	height: 65px;
+	line-height: 65px;
 	position: relative;
-	top: 46px;
 	display: block;
 	color: #b8b8b8;
 }
 #classification ul li a img {
 	position: absolute;
-	top:-40px;
+	top:13px;
 	left: 20%;
 }
 #classification ul li:active {
@@ -51,7 +50,7 @@
 /*---------------------------------------------------------*/
 /*微调分类部分图片*/
 #classification .shipin {
-	top: -45px;
+	top: 9px;
 }
 #classification .qita {
 	left: 25%;

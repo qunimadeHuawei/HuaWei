@@ -67,11 +67,11 @@
   </div>
   <div id="function">
       <ul class="clearfix">
-        <li><a href="" class="x">下载<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon1.png"></a></li>
-        <li><a href="" class="y">复制<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon2.png"></a></li>
-        <li><a href="" class="z">移动<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon3.png"></a></li>
-        <li><a href="#rename" data-rel="dialog">重命名<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon4.png"></a></li>
-        <li><a href="<?php echo Yii::app()->createUrl('site/delete'); ?>" id="w">删除<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon5.png"></a></li>
+        <li><a data-ajax="false" href="" class="x">下载<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon1.png"></a></li>
+        <li><a data-ajax="false" href="" class="y">复制<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon2.png"></a></li>
+        <li><a data-ajax="false" href="" class="z">移动<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon3.png"></a></li>
+        <li><a data-ajax="false" href="#rename" data-rel="dialog">重命名<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon4.png"></a></li>
+        <li><a data-ajax="false" href="<?php echo Yii::app()->createUrl('site/delete'); ?>" id="w">删除<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon5.png"></a></li>
       </ul>
     </div>  <!--添加点击重命名后弹出的表单-->
 </div> 
