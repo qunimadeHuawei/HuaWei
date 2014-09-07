@@ -21,6 +21,7 @@ class File extends CActiveRecord
 	protected $file;   	//保存上传文件信息 CUploadedFile类
 	public $file_type;
 
+	public $file_relation_id;
 	/**
 	 * @return string the associated database table name
 	 */
