@@ -1,8 +1,12 @@
 $(document).on("pageinit",".allPage",function(){
 	var whichTaped;
 	var aValue;
-	var href;
-	href = $("#w").attr("href");
+	var a,b,c,d,e;
+	a = $("#a").attr("href");
+	b = $("#b").attr("href");
+	c = $("#c").attr("href");
+	d = $("#d").attr("href");
+	e = $("#e").attr("href");
 	var count=0;
 	var url = $("#url").attr("value");
 	var Delete = "<?php echo Yii::app()->createUrl('site/delete'); ?>";
@@ -33,13 +37,15 @@ $(document).on("pageinit",".allPage",function(){
 	$("img.rightClick").on("tap",function(){
 		$(this).attr("src",url+"images/arrow-d.png");
 		aValue = $(this).parent().find("a").attr("value");//获取当前点击的元素的value
-	//	alert(aValue);
-		$("#function ul li a#w").attr("href",href+"/"+aValue);
+		$("#function ul li a#a").attr("href",a+"/"+aValue);
+		$("#function ul li a#b").attr("href",b+"/"+aValue);
+		$("#function ul li a#c").attr("href",c+"/"+aValue);
+		$("#function ul li a#d").attr("href",d+"/"+aValue);
+		$("#function ul li a#e").attr("href",e+"/"+aValue);
 		$("#footer").hide();
 		$('#function').slideDown();
 		count=2;
 	});		
-	console.log('aaa');
 	//以上代码实现点击时的#function的弹框效果
 /*	$("mainContent ul li .tap_icon").on("tap",function(){
 		$("#footer").hide();
@@ -58,6 +64,9 @@ $(document).on("pageinit",".allPage",function(){
 /*重命名隐藏提交按钮*/
 	$("a#queding").on("tap",function(){
 		$("#hideSubmit").submit();
+	});
+	$("a#queding1").on("tap",function(){
+		$("#hideSubmit1").submit();
 	});
 //	$('input#chongmm').attr("placeholder",whichTaped);
 //	console.log('jnn');

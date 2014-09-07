@@ -29,6 +29,9 @@ body {
 #mainContent ul li a.floder {
 	line-height: 48px;
 }
+#mainContent ul li a.floder h2 {
+	margin: 0;
+}
 .ui-listview .ui-li-has-thumb>img:first-child, .ui-listview .ui-li-has-thumb>.ui-btn>img:first-child, .ui-listview .ui-li-has-thumb .ui-li-thumb {
 position: absolute;
 left: 20px;

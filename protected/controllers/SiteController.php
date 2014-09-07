@@ -4,7 +4,7 @@ class SiteController extends Controller
 {
 	public $defaultAction = 'homePage';
 	public $layout='//layouts/empty';
-
+	public $action = '';
 	/**
 	 * @return array action filters
 	 */
@@ -48,7 +48,7 @@ class SiteController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('test','homePage','classifyDoc','classifyMusic','classifyPic','classifyVideo','classifyOthers','transportationUpload','transportationDownload','transportationYun','set',
+				'actions'=>array('logout','test','homePage','classifyDoc','classifyMusic','classifyPic','classifyVideo','classifyOthers','transportationUpload','transportationDownload','transportationYun','set',
 						'upload','download','rename','copy','move','delete'
 					),
 				'users'=>array('@'),
@@ -112,13 +112,17 @@ class SiteController extends Controller
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
 	 */
-	public function actionHomePage()
+	public function actionHomePage($f=0)
 	{
-		//$model = FileRelation::model()->findBySql("select rel.file_id,file.file_name as name,file.create_time from file_relation as rel inner join file on rel.file_id=file.file_id where user_id=1 and type=0 and locate=0 union select rel.file_id,folder.folder_name as name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id=1 and type=1 and locate=0 order by create_time desc;");
-		$folder = Folder::model()->findAllBySql("select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id=".Yii::app()->user->id." and type=1 and locate=0 order by create_time desc");
-		//$file = File::model()->findAllBySql("select file.file_id,file.file_name,file.file_size,file.create_time from file_relation as rel inner join file on rel.file_id=file.file_id where user_id=".Yii::app()->user->id." and type=0 and locate=0 order by create_time desc");
-		$file = File::model()->findAllBySql("select f.file_id,f.file_name,f.file_size,s.file_type,f.create_time from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=".Yii::app()->user->id." and r.type=0 and r.locate=0 order by f.create_time desc");
-
+		if($f == 0){
+			//$model = FileRelation::model()->findBySql("select rel.file_id,file.file_name as name,file.create_time from file_relation as rel inner join file on rel.file_id=file.file_id where user_id=1 and type=0 and locate=0 union select rel.file_id,folder.folder_name as name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id=1 and type=1 and locate=0 order by create_time desc;");
+			$folder = Folder::model()->findAllBySql("select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id=".Yii::app()->user->id." and type=1 and locate=0 order by create_time desc");
+			//$file = File::model()->findAllBySql("select file.file_id,file.file_name,file.file_size,file.create_time from file_relation as rel inner join file on rel.file_id=file.file_id where user_id=".Yii::app()->user->id." and type=0 and locate=0 order by create_time desc");
+			$file = File::model()->findAllBySql("select r.file_relation_id,f.file_id,f.file_name,f.file_size,s.file_type,f.create_time from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=".Yii::app()->user->id." and r.type=0 and r.locate=0 order by f.create_time desc");
+		}else{
+			$folder = Folder::model()->findAllBySql("select folder.folder_id,folder.folder_name,folder.create_time from file_relation as rel inner join folder on rel.file_id=folder.folder_id where user_id=".Yii::app()->user->id." and type=1 and locate=$f order by create_time desc");
+			$file = File::model()->findAllBySql("select r.file_relation_id,f.file_id,f.file_name,f.file_size,s.file_type,f.create_time from (file as f  left join file_relation as r on f.file_id=r.file_id) left join file_sort as s on f.file_id=s.file_id where r.user_id=".Yii::app()->user->id." and r.type=0 and r.locate=$f order by f.create_time desc");
+		}
 		$this->render('homePage',array(
 			'folder'=>$folder,
 			'file'=>$file,
@@ -293,7 +297,8 @@ class SiteController extends Controller
 	 */
 	public function actionDownload($id)
 	{
-		$file = File::model()->findBySql("select * from file_relation inner join file on file_relation.file_id=file.file_id where user_id=".Yii::app()->user->id." and file.file_id=".$id);
+		//$file = File::model()->findBySql("select * from file_relation inner join file on file_relation.file_id=file.file_id where user_id=".Yii::app()->user->id." and file.file_id=".$id);
+		$file = File::model()->findBySql("select * from file where file_id=(select file_id from file_relation where user_id=".Yii::app()->user->id." and file_relation_id=".$id.")");
 		//var_dump($file);die;
 		if($file != null){
 			$file_name = $file->file_name;
@@ -327,7 +332,7 @@ class SiteController extends Controller
 			fclose($fp);
 			return true;
 		}else{
-		         echo '对不起,没有可下载的文件';
+		         echo "<script type='text/javascript'>	alert('对不起,没有可下载的文件! ');history.go(-1);	</script>";
 		}
 	}
 	
@@ -337,11 +342,14 @@ class SiteController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$file = File::model()->findBySql("select * from file_relation inner join file on file_relation.file_id=file.file_id where user_id=".Yii::app()->user->id." and file.file_id=".$id);
+		//$file = File::model()->findBySql("select * from file_relation inner join file on file_relation.file_id=file.file_id where user_id=".Yii::app()->user->id." and file.file_id=".$id);
+		$relation = FileRelation::model()->findByPk($id);
+		$file = File::model()->findBySql("select * from file where file_id=(select file_id from file_relation where user_id=".Yii::app()->user->id." and file_relation_id=".$id.")");
 		if($file != null)
 		{
 			$file->delFile();
 			$file->delete();
+			$relation->delete();
 			$fileVolume = Volume::model()->findByAttributes(array('user_id'=>Yii::app()->user->id));
 			$fileVolume->volume_used -= $file->file_size;
 			$fileVolume->save();
@@ -360,7 +368,8 @@ class SiteController extends Controller
 		if(isset($_POST['id']))
 			$id = $_POST['id'];
 		else return;
-		$file = File::model()->findBySql("select * from file_relation inner join file on file_relation.file_id=file.file_id where user_id=".Yii::app()->user->id." and file.file_id=".$id);
+		//$file = File::model()->findBySql("select * from file_relation inner join file on file_relation.file_id=file.file_id where user_id=".Yii::app()->user->id." and file.file_id=".$id);
+		$file = File::model()->findBySql("select * from file where file_id=(select file_id from file_relation where user_id=".Yii::app()->user->id." and file_relation_id=".$id.")");
 		if($file != null)
 		{
 			$file->file_name = $_POST['new_name'];
@@ -375,18 +384,55 @@ class SiteController extends Controller
 	 * 复制
 	 * @return [type] [description]
 	 */
-	public function actionCopy()
+	public function actionCopy($id)
 	{
-
+		$file = File::model()->findBySql("select file_id from file_relation where user_id=".Yii::app()->user->id." and file_relation_id=".$id)->file_id;
+		if($file)
+			echo "<script type='text/javascript'>	alert('Wrong file! ');history.go(-1);	</script>";
+		if(isset($_POST['folder']))
+		{
+			$relation = new FileRelation;
+			$relation->user_id = Yii::app()->user->id;
+			$relation->file_id = File::model()->findBySql("select file_id from file_relation where file_relation_id=".$id)->file_id;
+			$type = 0;
+			$relation->locate = $_POST['folder'];
+			if($relation->save())
+				$this->redirect(Yii::app()->createUrl('site/homePage',array('f'=>$_POST['folder'])));
+			else
+				echo "<script type='text/javascript'>	alert('Error! ');history.go(-1);	</script>";
+		}
+		$model = Folder::model()->findAllBySql("select * from folder where folder_id in (select file_id from file_relation where type=1 and locate=(select locate from file_relation where file_relation_id=$id))");
+		$this->render('copyAndMove', array(
+			'model'=>$model,
+		));
 	}
 
 	/**
 	 * 移动
 	 * @return [type] [description]
 	 */
-	public function actionMove()
+	public function actionMove($id)
 	{
-
+		$this->action = 'move';
+		$file = File::model()->findBySql("select file_id from file_relation where user_id=".Yii::app()->user->id." and file_relation_id=".$id)->file_id;
+		if($file)
+			echo "<script type='text/javascript'>	alert('Wrong file! ');history.go(-1);	</script>";
+		if(isset($_POST['folder']))
+		{
+			$relation = new FileRelation;
+			$relation->user_id = Yii::app()->user->id;
+			$relation->file_id = File::model()->findBySql("select file_id from file_relation where file_relation_id=".$id)->file_id;
+			$type = 0;
+			$relation->locate = $_POST['folder'];
+			if($relation->save()){
+				FileRelation::model()->findByPk($id)->delete();
+				$this->redirect(Yii::app()->createUrl('site/homePage',array('f'=>$_POST['folder'])));
+			}else
+				echo "<script type='text/javascript'>	alert('Error! ');history.go(-1);	</script>";
+		}
+		$model = Folder::model()->findAllBySql("select * from folder where folder id in (select file_id from file_relation where type=1 and locate=(select locate from file_relation where file_relation_id=$id))");
+		$this->render('copyAndMove', array(
+			'model'=>$model,
+		));
 	}
-
 }

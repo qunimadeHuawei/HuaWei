@@ -45,10 +45,10 @@
   <div data-role="content" id="mainContent">
     <ul data-role="listview" data-filter="true" data-filter-placeholder="搜索我的文件">
       <?php foreach($folder as $tmp_folder){?>
-        <li><a value='' href="#" class="floder"><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/homePage1_floder.png" width="38" height="42"><?php echo $tmp_folder['folder_name']; ?></a></li>
+        <li><a value='' href="<?php echo Yii::app()->createUrl('site/homePage',array('f'=>$tmp_folder->folder_id)); ?>" class="floder"><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/homePage1_floder.png" width="38" height="42"><h2><?php echo $tmp_folder['folder_name']; ?></h2></a></li>  <!--添加h2-->
       <?php }?>
       <?php foreach($file as $tmp_file){?>
-        <li><a value='<?php echo $tmp_file->file_id;?>' ><img src="<?php  echo Common::getPicPath($tmp_file->file_type); ?>" width="38" height="42"><h2><?php echo $tmp_file->file_name; ?></h2><p><?php echo Common::fileSize($tmp_file->file_size); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo Common::cutDateTime($tmp_file->create_time); ?></p></a><img class="rightClick" src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/arrow-r.png"></li>
+        <li><a value='<?php echo $tmp_file->file_relation_id;?>' ><img src="<?php  echo Common::getPicPath($tmp_file->file_type); ?>" width="38" height="42"><h2><?php echo $tmp_file->file_name; ?></h2><p><?php echo Common::fileSize($tmp_file->file_size); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo Common::cutDateTime($tmp_file->create_time); ?></p></a><img class="rightClick" src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/arrow-r.png"></li>
       <?php }?>
     <ul>
   </div>
@@ -67,11 +67,11 @@
   </div>
   <div id="function">
       <ul class="clearfix">
-        <li><a data-ajax="false" href="" id="w">下载<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon1.png"></a></li>
-        <li><a data-ajax="false" href="" class="y">复制<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon2.png"></a></li>
-        <li><a data-ajax="false" href="" class="z">移动<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon3.png"></a></li>
-        <li><a data-ajax="false" href="#rename" data-rel="dialog">重命名<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon4.png"></a></li>
-        <li><a data-ajax="false" href="<?php echo Yii::app()->createUrl('site/delete'); ?>" id="w">删除<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon5.png"></a></li>
+        <li><a data-ajax="false" href="<?php echo Yii::app()->createUrl('site/download'); ?>" id="a">下载<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon1.png"></a></li>
+        <li><a data-ajax="false" href="<?php echo Yii::app()->createUrl('site/copy'); ?>" id="b">复制<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon2.png"></a></li>
+        <li><a data-ajax="false" href="<?php echo Yii::app()->createUrl('site/move'); ?>" id="c">移动<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon3.png"></a></li>
+        <li><a data-ajax="false" href="#rename" data-rel="dialog" id="d">重命名<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon4.png"></a></li>
+        <li><a data-ajax="false" href="<?php echo Yii::app()->createUrl('site/delete'); ?>" id="e">删除<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon5.png"></a></li>
       </ul>
     </div>  <!--添加点击重命名后弹出的表单-->
 </div> 
@@ -82,8 +82,8 @@
         <h2 id="chongmingming">重命名</h2>
       </div>
       <div data-role="content">
-        <input type="text" name="rename" id="chyongmm" placeholder="请输入新名字"/><!--暂时未能做成百度网盘的效果-->
-        <input type="hidden" name="file_id" value='' /><!--暂时未能做成百度网盘的效果-->
+        <input type="text" name="new_name" id="chongmm" placeholder="请输入新名字"/>
+        <input type="hidden" name="file_id" value='' />
       </div>
       <div data-role="footer"> 
         <div data-role="navbar">
