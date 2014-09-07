@@ -15,12 +15,12 @@ $(document).on("pageinit",".allPage",function(){
 		$(this).find("img.rightClick").attr("src",url+"images/arrow-d.png");
 		$("#footer").hide();
 		$('#function').slideDown();
-		whichTaped = $(this).find('h2').html();
+	//	whichTaped = $(this).find('h2').html();       获取当前点击的文件名
 		count++;//count==1
 	});
 	$("#mainContent ul li a").on("tap",function(){
 		count++; //实现再次tap即消去#function的效果,count==2,再次点击时count==3
-		whichTaped = $(this).find('h2').html();
+	//	whichTaped = $(this).find('h2').html();
 		if(count>2){
 			$(this).parent().parent().find("img.rightClick").each(function(){
 				if($(this).attr("src")==url+"images/arrow-d.png"){

@@ -143,9 +143,9 @@ input.login {
 				移动和复制页面
 ----------------------------------------------------------------*/
 p.noFolder {
-	position: absolute;
-	top: 50%;
-	left: 13%;
+	width: 260px;
+	margin: 0 auto;
+	margin-top: 20%;
 	color:#aaa;
 	font-size: 16px;
 }
