@@ -67,7 +67,7 @@
   </div>
   <div id="function">
       <ul class="clearfix">
-        <li><a data-ajax="false" href="" class="x">下载<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon1.png"></a></li>
+        <li><a data-ajax="false" href="" id="w">下载<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon1.png"></a></li>
         <li><a data-ajax="false" href="" class="y">复制<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon2.png"></a></li>
         <li><a data-ajax="false" href="" class="z">移动<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon3.png"></a></li>
         <li><a data-ajax="false" href="#rename" data-rel="dialog">重命名<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon4.png"></a></li>
