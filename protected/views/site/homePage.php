@@ -33,7 +33,12 @@
 
 <div data-role="page" id="homePage" class="allPage">
   <div data-role="header" data-position="fixed" id="header">
-    <h1>华为网盘</h1>
+    <?php if(isset($_GET['f'])){?>
+      <a href="#" data-rel="back" data-role="none" style="position:absolute;top:.8em;left:3em;"><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/return2.png" width="48" height="40"></a>
+      <h1><?php echo Common::getFolderName($_GET['f']);?></h1>
+    <?php }else{?>  
+      <h1>华为网盘</h1>
+    <?php }?>  
     <form id="myForm"  enctype="multipart/form-data" action="<?php echo Yii::app()->createUrl('site/upload'); ?>" method="post">
       <input id="upload" name="file" type="file" onchange="formSubmit()">
       <input class="tap" type="button" value="上传" data-inline="true" data-mini="true">
@@ -45,10 +50,10 @@
   <div data-role="content" id="mainContent">
     <ul data-role="listview" data-filter="true" data-filter-placeholder="搜索我的文件">
       <?php foreach($folder as $tmp_folder){?>
-        <li><a value='' href="<?php echo Yii::app()->createUrl('site/homePage',array('f'=>$tmp_folder->folder_id)); ?>" class="floder"><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/homePage1_floder.png" width="38" height="42"><h2><?php echo $tmp_folder['folder_name']; ?></h2></a></li>  <!--添加h2-->
+        <li><a data-ajax="false"  value='' href="<?php echo Yii::app()->createUrl('site/homePage',array('f'=>$tmp_folder->folder_id)); ?>" class="floder"><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/homePage1_floder.png" width="38" height="42"><h2><?php echo $tmp_folder['folder_name']; ?></h2></a></li>  <!--添加h2-->
       <?php }?>
       <?php foreach($file as $tmp_file){?>
-        <li><a value='<?php echo $tmp_file->file_relation_id;?>' ><img src="<?php  echo Common::getPicPath($tmp_file->file_type); ?>" width="38" height="42"><h2><?php echo $tmp_file->file_name; ?></h2><p><?php echo Common::fileSize($tmp_file->file_size); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo Common::cutDateTime($tmp_file->create_time); ?></p></a><img class="rightClick" src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/arrow-r.png"></li>
+        <li><a data-ajax="false"  value='<?php echo $tmp_file->file_relation_id;?>' ><img src="<?php  echo Common::getPicPath($tmp_file->file_type); ?>" width="38" height="42"><h2><?php echo $tmp_file->file_name; ?></h2><p><?php echo Common::fileSize($tmp_file->file_size); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo Common::cutDateTime($tmp_file->create_time); ?></p></a><img class="rightClick" src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/arrow-r.png"></li>
       <?php }?>
     <ul>
   </div>
@@ -58,10 +63,10 @@
   <div data-role="footer" data-position="fixed" id="footer">
     <div data-role="navbar">
       <ul>
-        <li><a href="<?php echo Yii::app()->createUrl('site/homePage'); ?>" data-icon="home" class="mulu" data-ajax="false">目录</a></li>
-        <li><a href="<?php echo Yii::app()->createUrl('site/classifyDoc'); ?>" data-icon="home" class="fenlei" data-ajax="false">分类</a></li>
-        <li><a href="<?php echo Yii::app()->createUrl('site/transportationUpload'); ?>" data-icon="home" class="chuanshuliebiao" data-ajax="false">传输列表</a></li>
-        <li><a href="<?php echo Yii::app()->createUrl('site/set'); ?>" data-icon="home" class="shezhi" data-ajax="false">设置</a></li>
+        <li><a data-ajax="false" href="<?php echo Yii::app()->createUrl('site/homePage'); ?>" data-icon="home" class="mulu" data-ajax="false">目录</a></li>
+        <li><a data-ajax="false" href="<?php echo Yii::app()->createUrl('site/classifyDoc'); ?>" data-icon="home" class="fenlei" data-ajax="false">分类</a></li>
+        <li><a data-ajax="false" href="<?php echo Yii::app()->createUrl('site/transportationUpload'); ?>" data-icon="home" class="chuanshuliebiao" data-ajax="false">传输列表</a></li>
+        <li><a data-ajax="false" href="<?php echo Yii::app()->createUrl('site/set'); ?>" data-icon="home" class="shezhi" data-ajax="false">设置</a></li>
       </ul>
     </div>
   </div>
@@ -83,13 +88,13 @@
       </div>
       <div data-role="content">
         <input type="text" name="new_name" id="chongmm" placeholder="请输入新名字"/>
-        <input type="hidden" name="file_id" value='' />
+        <input type="hidden" name="file_id" value='' id='re' />
       </div>
       <div data-role="footer"> 
         <div data-role="navbar">
           <ul>
             <li><a href="#" data-rel="back"><input type="button" data-inline="true" value="取消"></a></li>
-            <li><a href="#" id="queding"><input type="button" data-inline="true" value="确定"></a></li>
+            <li><a data-ajax="false" id="queding"><input type="button" data-inline="true" value="确定"></a></li>
           </ul>
       </div>
     </form>

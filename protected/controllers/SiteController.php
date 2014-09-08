@@ -13,7 +13,7 @@ class SiteController extends Controller
 		return array(
 			'accessControl', // perform access control for CRUD operations
  			//'postOnly', // we only allow deletion via POST request
-		);
+			);
 	}
 
 	/**
@@ -26,13 +26,13 @@ class SiteController extends Controller
 			'captcha'=>array(
 				'class'=>'CCaptchaAction',
 				'backColor'=>0xFFFFFF,
-			),
+				),
 			// page action renders "static" pages stored under 'protected/views/site/pages'
 			// They can be accessed via: index.php?r=site/page&view=FileName
 			'page'=>array(
 				'class'=>'CViewAction',
-			),
-		);
+				),
+			);
 	}
 
 	/**
@@ -44,19 +44,19 @@ class SiteController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('login'),
+				'actions'=>array('login','register'),
 				'users'=>array('*'),
-			),
+				),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('logout','test','homePage','classifyDoc','classifyMusic','classifyPic','classifyVideo','classifyOthers','transportationUpload','transportationDownload','transportationYun','set',
-						'upload','download','rename','copy','move','delete'
+					'upload','download','rename','copy','move','delete','newFolder'
 					),
 				'users'=>array('@'),
-			),
+				),
 			array('deny',  // deny all users
 				'users'=>array('*'),
-			),
-		);
+				),
+			);
 	}
 
 	/**
@@ -79,14 +79,12 @@ class SiteController extends Controller
 	public function actionLogin()
 	{
 		$model=new LoginForm;
-
 		// if it is ajax validation request
 		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
-
 		// collect user input data
 		if(isset($_POST['LoginForm']))
 		{
@@ -96,7 +94,7 @@ class SiteController extends Controller
 				$this->redirect(Yii::app()->user->returnUrl);
 		}
 		// display the login form
-		$this->render('login',array('model'=>$model));
+		$this->render('logIn',array('model'=>$model));
 	}
 
 	/**
@@ -106,6 +104,25 @@ class SiteController extends Controller
 	{
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
+	}
+
+	/**
+	 * [actionRegister description]
+	 * @return [type] [description]
+	 */
+	public function actionRegister()
+	{
+		$model=new User;
+		if(isset($_POST['User']))
+		{
+			$model->attributes=$_POST['User'];
+			var_dump($model);
+			if($model->save()){
+				echo "<script type='text/javascript'>alert('Register successfully! ');window.location.href = '../site/logIn';	</script>"; return; 
+				$this->redirect(Yii::app()->createUrl('site/login'));
+			}
+		}
+		$this->render('register',array('model'=>$model));
 	}
 
 	/**
@@ -126,7 +143,7 @@ class SiteController extends Controller
 		$this->render('homePage',array(
 			'folder'=>$folder,
 			'file'=>$file,
-		));
+			));
 	}
 
 	/**
@@ -138,7 +155,7 @@ class SiteController extends Controller
 		$file = File::model()->findAllBySql("select file.file_id,file.file_name,file.file_size,file.create_time from file_sort inner join file on file_sort.file_id=file.file_id where user_id=".Yii::app()->user->id." and  file_type=".File::$doc." order by create_time desc");
 		$this->render('classify_doc',array(
 			'file'=>$file,
-		));
+			));
 	}
 
 	/**
@@ -150,7 +167,7 @@ class SiteController extends Controller
 		$file = File::model()->findAllBySql("select file.file_id,file.file_name,file.file_size,file.create_time from file_sort inner join file on file_sort.file_id=file.file_id where user_id=".Yii::app()->user->id." and  file_type=".File::$pic." order by create_time desc");
 		$this->render('classify_pic',array(
 			'file'=>$file,
-		));
+			));
 	}
 
 	/**
@@ -162,7 +179,7 @@ class SiteController extends Controller
 		$file = File::model()->findAllBySql("select file.file_id,file.file_name,file.file_size,file.create_time from file_sort inner join file on file_sort.file_id=file.file_id where user_id=".Yii::app()->user->id." and  file_type=".File::$music." order by create_time desc");
 		$this->render('classify_music',array(
 			'file'=>$file,
-		));
+			));
 	}
 
 	/**
@@ -174,7 +191,7 @@ class SiteController extends Controller
 		$file = File::model()->findAllBySql("select file.file_id,file.file_name,file.file_size,file.create_time from file_sort inner join file on file_sort.file_id=file.file_id where user_id=".Yii::app()->user->id." and  file_type=".File::$others." order by create_time desc");
 		$this->render('classify_others',array(
 			'file'=>$file,
-		));
+			));
 	}
 
 	/**
@@ -186,7 +203,7 @@ class SiteController extends Controller
 		$file = File::model()->findAllBySql("select file.file_id,file.file_name,file.file_size,file.create_time from file_sort inner join file on file_sort.file_id=file.file_id where user_id=".Yii::app()->user->id." and  file_type=".File::$video." order by create_time desc");
 		$this->render('classify_video',array(
 			'file'=>$file,
-		));
+			));
 	}
 	
 	/**
@@ -199,7 +216,7 @@ class SiteController extends Controller
 		//$file = File::model()->findAllBySql("select file.file_id,file.file_name,file.file_size,upload.create_time from upload inner join file on upload.file_id=file.file_id where user_id=".Yii::app()->user->id." order by create_time desc");
 		$this->render('transportationUpload',array(
 			'file'=>$file,
-		));
+			));
 	}
 	
 	/**
@@ -212,7 +229,7 @@ class SiteController extends Controller
 		//$file = File::model()->findAllBySql("select file.file_id,file.file_name,file.file_size,download.create_time from download inner join file on download.file_id=file.file_id where user_id=".Yii::app()->user->id." order by create_time desc");
 		$this->render('transportationDownload',array(
 			'file'=>$file,
-		));
+			));
 	}
 	
 	/**
@@ -233,16 +250,16 @@ class SiteController extends Controller
 		$volume = Volume::model()->findByAttributes(array('user_id'=>Yii::app()->user->id));
 		$this->render('set',array(
 			'volume'=>$volume->volume_used,
-		));
+			));
 	}
 
-/****************************************************************************      功能函数       ******************************************************************************************/
-/****************************************************************************      功能函数       ******************************************************************************************/
-/****************************************************************************      功能函数       ******************************************************************************************/
-/****************************************************************************      功能函数       ******************************************************************************************/
-/****************************************************************************      功能函数       ******************************************************************************************/
-/****************************************************************************      功能函数       ******************************************************************************************/
-/****************************************************************************      功能函数       ******************************************************************************************/
+	/****************************************************************************      功能函数       ******************************************************************************************/
+	/****************************************************************************      功能函数       ******************************************************************************************/
+	/****************************************************************************      功能函数       ******************************************************************************************/
+	/****************************************************************************      功能函数       ******************************************************************************************/
+	/****************************************************************************      功能函数       ******************************************************************************************/
+	/****************************************************************************      功能函数       ******************************************************************************************/
+	/****************************************************************************      功能函数       ******************************************************************************************/
 
 	/**
 	 * 用于测试
@@ -252,7 +269,7 @@ class SiteController extends Controller
 	{
 		$this->render('test',array(
 		//	'volume'=>$volume->volume_used,
-		));
+			));
 	}	
 
 	/**
@@ -305,9 +322,8 @@ class SiteController extends Controller
 			$file_path = Yii::app()->basePath."/../files/".$file->file_path;
 			if(!file_exists($file_path))
 			{	
-				echo '对不起你要下载的文件不存在';
-				echo $file->file_path;
-			    	return false;
+				echo "<script type='text/javascript'>alert('对不起你要下载的文件不存在! ');history.go(-1);</script>";
+				return false;
 			}
 			$file_size = filesize($file_path);
 			
@@ -322,9 +338,9 @@ class SiteController extends Controller
 			
 			while(!feof($fp)&&$file_size-$cur_pos>$buffer_size)
 			{
-			    $buffer = fread($fp,$buffer_size);
-			    echo $buffer;
-			    $cur_pos += $buffer_size;
+				$buffer = fread($fp,$buffer_size);
+				echo $buffer;
+				$cur_pos += $buffer_size;
 			}
 			
 			$buffer = fread($fp,$file_size-$cur_pos);
@@ -332,7 +348,7 @@ class SiteController extends Controller
 			fclose($fp);
 			return true;
 		}else{
-		         echo "<script type='text/javascript'>	alert('对不起,没有可下载的文件! ');history.go(-1);	</script>";
+			echo "<script type='text/javascript'>	alert('对不起,没有可下载的文件! ');history.go(-1);	</script>";
 		}
 	}
 	
@@ -365,8 +381,8 @@ class SiteController extends Controller
 	 */
 	public function actionRename()
 	{
-		if(isset($_POST['id']))
-			$id = $_POST['id'];
+		if(isset($_POST['file_id']))
+			$id = $_POST['file_id'];
 		else return;
 		//$file = File::model()->findBySql("select * from file_relation inner join file on file_relation.file_id=file.file_id where user_id=".Yii::app()->user->id." and file.file_id=".$id);
 		$file = File::model()->findBySql("select * from file where file_id=(select file_id from file_relation where user_id=".Yii::app()->user->id." and file_relation_id=".$id.")");
@@ -374,9 +390,9 @@ class SiteController extends Controller
 		{
 			$file->file_name = $_POST['new_name'];
 			$file->save();
-			echo 'ture';
+			echo "<script type='text/javascript'>history.go(-2);	</script>";
 		}else{
-			echo 'false';
+			echo "<script type='text/javascript'>	alert('Error! ');history.go(-2);	</script>";
 		}
 	}
 
@@ -387,7 +403,7 @@ class SiteController extends Controller
 	public function actionCopy($id)
 	{
 		$file = File::model()->findBySql("select file_id from file_relation where user_id=".Yii::app()->user->id." and file_relation_id=".$id)->file_id;
-		if($file)
+		if(!$file)
 			echo "<script type='text/javascript'>	alert('Wrong file! ');history.go(-1);	</script>";
 		if(isset($_POST['folder']))
 		{
@@ -403,7 +419,8 @@ class SiteController extends Controller
 		}
 		$model = Folder::model()->findAllBySql("select * from folder where folder_id in (select file_id from file_relation where type=1 and locate=(select locate from file_relation where file_relation_id=$id))");
 		$this->render('copyAndMove', array(
-			'model'=>$model,
+			'folder'=>$model,
+			'file'=>$id,
 		));
 	}
 
@@ -415,7 +432,7 @@ class SiteController extends Controller
 	{
 		$this->action = 'move';
 		$file = File::model()->findBySql("select file_id from file_relation where user_id=".Yii::app()->user->id." and file_relation_id=".$id)->file_id;
-		if($file)
+		if(!$file)
 			echo "<script type='text/javascript'>	alert('Wrong file! ');history.go(-1);	</script>";
 		if(isset($_POST['folder']))
 		{
@@ -430,9 +447,33 @@ class SiteController extends Controller
 			}else
 				echo "<script type='text/javascript'>	alert('Error! ');history.go(-1);	</script>";
 		}
-		$model = Folder::model()->findAllBySql("select * from folder where folder id in (select file_id from file_relation where type=1 and locate=(select locate from file_relation where file_relation_id=$id))");
+		$model = Folder::model()->findAllBySql("select * from folder where folder_id in (select file_id from file_relation where type=1 and locate=(select locate from file_relation where file_relation_id=$id))");
 		$this->render('copyAndMove', array(
-			'model'=>$model,
+			'folder'=>$model,
+			'file'=>$id,
 		));
+	}
+
+	/**
+	 * [actionNewFolder description]
+	 * @return [type] [description]
+	 */
+	public function actionNewFolder($id)
+	{
+		$folder = new Folder;
+		$relation = new FileRelation;
+		if(isset($_POST['folder_name'])){
+			$folder->attributes = $_POST;
+			$folder->save();
+			$relation->user_id = Yii::app()->user->id;
+			$relation->file_id = $folder->folder_id;
+			$relation->type = 1;
+			$relation->locate = FileRelation::model()->findByPk($id)->locate;
+			if($relation->save()){
+				echo "<script type='text/javascript'>history.go(-2);	</script>";
+				return;
+			}
+		}
+		echo "<script type='text/javascript'>	alert('Error! ');history.go(-1);	</script>";
 	}
 }

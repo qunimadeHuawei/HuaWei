@@ -82,5 +82,14 @@ class Common {
 		return $result;
 	}
 
+	/**
+	 * [getFolderName description]
+	 * @return [type] [description]
+	 */
+	public static function getFolderName($id)
+	{
+		return Folder::model()->findByPk($id)->folder_name;
+	}
+
 }
 ?>

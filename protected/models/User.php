@@ -10,6 +10,7 @@
  */
 class User extends CActiveRecord
 {
+	public $password_repeat;  // 自己定义的变量
 	/**
 	 * @return string the associated database table name
 	 */
@@ -26,13 +27,14 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('user_name, password', 'required'),
+			array('user_name, password ,password_repeat', 'required'),
 			array('user_name', 'length', 'max'=>20),
 			array('password', 'length', 'max'=>64),
+			array('password_repeat', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('user_id, user_name, password', 'safe', 'on'=>'search'),
-		);
+			);
 	}
 
 	/**
@@ -43,7 +45,7 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-		);
+			);
 	}
 
 	/**
@@ -55,7 +57,7 @@ class User extends CActiveRecord
 			'user_id' => 'User',
 			'user_name' => 'User Name',
 			'password' => 'User Password',
-		);
+			);
 	}
 
 	/**
@@ -82,7 +84,7 @@ class User extends CActiveRecord
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
-		));
+			));
 	}
 
 	/**
@@ -94,6 +96,19 @@ class User extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	/**
+	 * [afterValidate description]
+	 * @return [type] [description]
+	 */
+	protected function afterValidate() {
+		parent::afterValidate();
+		if($this->password!=$this->password_repeat)
+			$this->addError('password','Confirm Password does not match with Password value.');
+		$user=User::model()->findByAttributes(array('user_name'=>$this->user_name));
+		if ($user)
+			$this->addError('password','This name has been registered');
 	}
 
 	/**

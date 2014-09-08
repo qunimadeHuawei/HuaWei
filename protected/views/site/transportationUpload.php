@@ -70,9 +70,9 @@
       </ul>
     </div>
   </div>
-  <div id="function">
+  <div id="function" style="display:none;">
       <ul class="clearfix">
-        <li style="width:100%;"><a href="">删除<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon5.png" style="left:47%;"></a></li>
+        <li style="width:100%;"><a data-ajax="false" href="<?php echo Yii::app()->createUrl('site/delete'); ?>" id="e">删除<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon5.png" style="left:47%;"></a></li>
       </ul>
     </div>
 </div> 

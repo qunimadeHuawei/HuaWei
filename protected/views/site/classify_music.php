@@ -64,11 +64,11 @@
       </ul>
     </div>
   </div>
-  <div id="function">
+  <div id="function" style="display:none;">
       <ul class="clearfix">
-        <li style="width: 33%;"><a data-ajax="false" href="">下载<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon1.png"></a></li>
-        <li style="width: 33%;"><a data-ajax="false" href="">重命名<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon4.png"></a></li>
-        <li style="width: 33%;"><a data-ajax="false" href="">删除<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon5.png"></a></li>
+        <li style="width: 33%;"><a data-ajax="false" href="<?php echo Yii::app()->createUrl('site/download'); ?>" id="a">下载<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon1.png"></a></li>
+        <li style="width: 33%;"><a data-ajax="false" href="#rename" data-rel="dialog" id="d">重命名<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon4.png"></a></li>
+        <li style="width: 33%;"><a data-ajax="false" href="<?php echo Yii::app()->createUrl('site/delete'); ?>" id="e">删除<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon5.png"></a></li>
       </ul>
   </div>
 </div> 
