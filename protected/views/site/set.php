@@ -39,7 +39,7 @@
     <div class="top">
       <div class="account clearfix">
         <span class="account_left">华为网盘账号：<?php echo Yii::app()->user->name; ?></span>
-        <a href="<?php echo Yii::app()->createUrl('site/logout'); ?>" class="account_right">注销</a>
+        <a data-ajax="false" href="<?php echo Yii::app()->createUrl('site/logout'); ?>" class="account_right">注销</a>
       </div>
       <div class="capacity">
         <div class="showInWord">
