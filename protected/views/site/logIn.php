@@ -37,10 +37,7 @@
   <div data-role="content" id="mainContent">
 <?php $form=$this->beginWidget('CActiveForm', array(
   'id'=>'login-form',
-  'enableClientValidation'=>true,
-  'clientOptions'=>array(
-    'validateOnSubmit'=>true,
-  ),
+   'htmlOptions'=>array('data-ajax'=>'false'),
 )); ?>
       <div data-role="fieldcontain">
         <?php echo $form->error($model,'password',array('style'=>'color:red')); ?>

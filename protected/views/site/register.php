@@ -38,17 +38,18 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
   'id'=>'register-form',
   'action'=>Yii::app()->createUrl('site/register'),
+  'htmlOptions'=>array('data-ajax'=>'false'),
 )); ?>
       <div data-role="fieldcontain">
         <?php echo $form->error($model,'password',array('style'=>'color:red')); ?>
         <label for="registered">账号</label>
-        <input type="text" name="User['user_name']" id="registered" placeholder="用户名/邮箱">
+        <input type="text" name="user_name" id="registered" placeholder="用户名/邮箱">
         <br>
         <label for="password">密码</label>
-        <input type="password" name="User['password']" id="paddword">
+        <input type="password" name="password" id="paddword">
         <br>
         <label for="password">确认密码</label>
-        <input type="password" name="User['password_repeat']" id="paddword">
+        <input type="password" name="password_repeat" id="paddword">
       </div>
       <input type="submit" value="注册" class="login">
 <?php $this->endWidget(); ?>

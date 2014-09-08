@@ -113,11 +113,14 @@ class SiteController extends Controller
 	public function actionRegister()
 	{
 		$model=new User;
-		if(isset($_POST['User']))
+		if(isset($_POST))
 		{
-			$model->attributes=$_POST['User'];
-			var_dump($model);
+			$model->attributes=$_POST;
 			if($model->save()){
+				$volume = new Volume;
+				$volume->user_id = $model->user_id;
+				$volume->volume_used = 0;
+				$volume->save();
 				echo "<script type='text/javascript'>alert('Register successfully! ');window.location.href = '../site/logIn';	</script>"; return; 
 				$this->redirect(Yii::app()->createUrl('site/login'));
 			}
@@ -155,7 +158,7 @@ class SiteController extends Controller
 		$file = File::model()->findAllBySql("select file.file_id,file.file_name,file.file_size,file.create_time from file_sort inner join file on file_sort.file_id=file.file_id where user_id=".Yii::app()->user->id." and  file_type=".File::$doc." order by create_time desc");
 		$this->render('classify_doc',array(
 			'file'=>$file,
-			));
+		));
 	}
 
 	/**
@@ -248,6 +251,12 @@ class SiteController extends Controller
 	public function actionSet()
 	{
 		$volume = Volume::model()->findByAttributes(array('user_id'=>Yii::app()->user->id));
+		if(!$volume){
+			$volume = new Volume;
+			$volume->user_id = Yii::app()->user->id;
+			$volume->volume_used = 0;
+			$volume->save();
+		}
 		$this->render('set',array(
 			'volume'=>$volume->volume_used,
 			));
@@ -371,7 +380,8 @@ class SiteController extends Controller
 			$fileVolume->save();
 			$this->redirect(Yii::app()->user->returnUrl);
 		}else{
-			echo "<script type='text/javascript'>	alert('Error! ');history.go(-1);	</script>";
+			$relation->delete();
+			echo "<script type='text/javascript'>	alert('文件已不存在! ');history.go(-1);	</script>";
 		}
 	}
 

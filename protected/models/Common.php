@@ -91,5 +91,17 @@ class Common {
 		return Folder::model()->findByPk($id)->folder_name;
 	}
 
+	/**
+	 * [getRelation description]
+	 * @return [type] [description]
+	 */
+	public static function getRelation($id)
+	{
+		$relation = FileRelation::model()->findByAttributes(array('file_id'=>$id));
+		if(!$relation)
+			return 0;
+		else
+			return $relation->file_relation_id;
+	}
 }
 ?>

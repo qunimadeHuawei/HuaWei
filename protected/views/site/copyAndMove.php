@@ -37,8 +37,12 @@
 <!-- mainContent starts here  -->
   <div data-role="content" id="mainContent">
     <form action="<?php $this->action == 'move' ? $url=Yii::app()->createUrl('site/move') : $url=Yii::app()->createUrl('site/copy'); echo $url.'/'.$file; ?>" method="post" id="hideSubmit">
+      <?php if(!$folder){?>
+          <p class="noFolder">当前页面没有任何文件夹╮(╯▽╰)╭</p>
+      <?php }else{?>
       <?php foreach($folder as $tmp_folder){?>
         <input type="radio" name="folder" value=<?php echo $tmp_folder->folder_id?>><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/homePage1_floder.png" width="38" height="42"><?php echo $tmp_folder['folder_name']; ?>
+      <?php }?>
       <?php }?>
   </div>
 <!--  mainContent ends here   -->
@@ -57,7 +61,7 @@
                    点击新建 时弹出的新建文件夹页面
   `````````````````````````````````````````````````````````````````````````````````````````-->
 <div data-role="page" id="newFolder" class="allPage">
-    <form id="hideSubmit1" action="<?php echo Yii::app()->createUrl('site/newFolder').'/'.$file; ?>" method="post">
+    <form  data-ajax="false" id="hideSubmit1" action="<?php echo Yii::app()->createUrl('site/newFolder').'/'.$file; ?>" method="post">
       <div data-role="header">
         <h2 id="chongmingming">新建文件夹</h2>
       </div>

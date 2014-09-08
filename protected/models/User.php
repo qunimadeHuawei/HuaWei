@@ -33,7 +33,7 @@ class User extends CActiveRecord
 			array('password_repeat', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('user_id, user_name, password', 'safe', 'on'=>'search'),
+			array('user_id, user_name, password, password_repeat', 'safe', 'on'=>'search'),
 			);
 	}
 
@@ -57,6 +57,7 @@ class User extends CActiveRecord
 			'user_id' => 'User',
 			'user_name' => 'User Name',
 			'password' => 'User Password',
+			'password_repeat' => 'Password Repeat',
 			);
 	}
 
@@ -81,6 +82,7 @@ class User extends CActiveRecord
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('user_name',$this->user_name,true);
 		$criteria->compare('password',$this->password,true);
+		$criteria->compare('password_repeat',$this->password,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

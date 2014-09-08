@@ -47,7 +47,7 @@
   <div data-role="content" id="mainContent">
     <ul data-role="listview" data-filter="true" data-filter-placeholder="搜索我的文件">
       <?php foreach($file as $tmp_file){?>
-        <li><a ><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/homePage1_video.png" width="38" height="42"><h2><?php echo $tmp_file->file_name; ?></h2><p><?php echo Common::fileSize($tmp_file->file_size); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo Common::cutDateTime($tmp_file->create_time); ?></p></a><img class="rightClick" src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/arrow-r.png"></li>
+        <li><a  data-ajax="false" value='<?php echo Common::getRelation($tmp_file->file_id);?>'><img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/homePage1_video.png" width="38" height="42"><h2><?php echo $tmp_file->file_name; ?></h2><p><?php echo Common::fileSize($tmp_file->file_size); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo Common::cutDateTime($tmp_file->create_time); ?></p></a><img class="rightClick" src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/arrow-r.png"></li>
       <?php }?>    <ul>
   </div>
 <!--  mainContent ends here   -->
@@ -72,6 +72,23 @@
   </div>
 </div> 
 <!--    footer ends here  -->
-
+  <div data-role="page" id="rename" class="allPage">
+    <form id="hideSubmit" action="<?php echo Yii::app()->createUrl('site/rename'); ?>" method="post">
+      <div data-role="header">
+        <h2 id="chongmingming">重命名</h2>
+      </div>
+      <div data-role="content">
+        <input type="text" name="new_name" id="chongmm" placeholder="请输入新名字"/>
+        <input type="hidden" name="file_id" value='' id='re' />
+      </div>
+      <div data-role="footer"> 
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#" data-rel="back"><input type="button" data-inline="true" value="取消"></a></li>
+            <li><a data-ajax="false" id="queding"><input type="button" data-inline="true" value="确定"></a></li>
+          </ul>
+      </div>
+    </form>
+  </div>
 </body>
 </html>
