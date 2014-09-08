@@ -5,7 +5,6 @@ $(document).on("pageinit",".allPage",function(){
 	a = $("#a").attr("href");
 	b = $("#b").attr("href");
 	c = $("#c").attr("href");
-	d = $("#d").attr("href");
 	e = $("#e").attr("href");
 	var count=0;
 	var url = $("#url").attr("value");
@@ -40,7 +39,6 @@ $(document).on("pageinit",".allPage",function(){
 		$("#function ul li a#a").attr("href",a+"/"+aValue);
 		$("#function ul li a#b").attr("href",b+"/"+aValue);
 		$("#function ul li a#c").attr("href",c+"/"+aValue);
-		$("#function ul li a#d").attr("href",d+"/"+aValue);
 		$("#function ul li a#e").attr("href",e+"/"+aValue);
 		$("#footer").hide();
 		$('#function').slideDown();
