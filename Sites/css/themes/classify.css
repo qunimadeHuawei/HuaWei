@@ -28,13 +28,13 @@
 	background: url(../../images/border_top.png) bottom repeat-x #fff;
 }
 #classification ul li {
-	height: 65px;
+	height: 66px;
 	float: left;
 	width: 20%;
 	text-align: center;
 }
 #classification ul li a{
-	line-height: 65px;
+	padding-top: 4em;
 	position: relative;
 	display: block;
 	color: #b8b8b8;
@@ -46,6 +46,15 @@
 }
 #classification ul li:active {
 	background-color: #55b8f1;
+}
+#classification ul li#docLink a::after {
+	background-image: url(../images/classify_doc.png);
+	top: .5625em;
+	left: 50%;
+	margin-left: -11px;
+	display: block;
+	height: 42px;
+	width: 38px;
 }
 /*---------------------------------------------------------*/
 /*微调分类部分图片*/

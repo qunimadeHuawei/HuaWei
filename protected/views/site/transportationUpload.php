@@ -46,7 +46,7 @@
 <!--header ends here  -->
 
 <!-- mainContent starts here  -->
-  <div data-role="content" id="mainContent">
+  <div data-role="content" id="mainContent" style="padding-top:3em;">
 <!-- <div style="background-color:#e2e3e2;margin-top:30px;"><p id="">上传完成（xx）</p></div><br/> -->
      <ul data-role="listview">
       <?php foreach($file as $tmp_file){?>
@@ -72,7 +72,7 @@
   </div>
   <div id="function">
       <ul class="clearfix">
-        <li><a href="">删除<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon5.png"></a></li>
+        <li style="width:100%;"><a href="">删除<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon5.png" style="left:47%;"></a></li>
       </ul>
     </div>
 </div> 

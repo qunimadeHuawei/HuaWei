@@ -113,6 +113,7 @@ background-image: none; /*取消nav 的默认背景图片*/
 	position: absolute;
 	top: 13px;
 	left: 80%;
+	width: 34px;
 	padding: 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;

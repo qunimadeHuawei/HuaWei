@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/Sites/css/themes/jquery.mobile.icons.min.css">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />
 <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/Sites/css/themes/supplement.css">
+<link rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/Sites/css/transport.css">
 <script src="<?php echo Yii::app()->baseUrl; ?>/Sites/js/jquery.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
@@ -46,9 +47,9 @@
 <!--header ends here  -->
 
 <!-- mainContent starts here  -->
-  <div data-role="content" id="mainContent">
+  <div data-role="content" id="mainContent" style="padding-top:3em;">
 <!-- <div style="background-color:#e2e3e2;margin-top:30px;"><p id="">上传完成（xx）</p></div><br/> -->
-     <ul data-role="listview">
+     <ul data-role="listview" style="padding-top: 3em;" id="a">
       <?php foreach($file as $tmp_file){?>
         <li><a href="#"><img src="<?php echo Common::getPicPath($tmp_file->file_type); ?>" width="38" height="42"><h2><?php echo $tmp_file->file_name; ?></h2><p><?php echo Common::fileSize($tmp_file->file_size); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo Common::cutDateTime($tmp_file->create_time); ?></p></a><img class="rightClick" src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/arrow-r.png"></li>
       <?php }?>
