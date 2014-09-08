@@ -9,7 +9,7 @@ $(document).on("pageinit",".allPage",function(){
 	var count=0;
 	var url = $("#url").attr("value");
 	var Delete = "<?php echo Yii::app()->createUrl('site/delete'); ?>";
-	$("#function").hide();
+//	$("#function").hide();
 	$("#mainContent ul li a").on("taphold",function(){
 		$(this).find("img.rightClick").attr("src",url+"images/arrow-d.png");
 		$("#footer").hide();

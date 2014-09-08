@@ -65,7 +65,7 @@
       </ul>
     </div>
   </div>
-  <div id="function">
+  <div id="function" style="display:none;">
       <ul class="clearfix">
         <li><a data-ajax="false" href="<?php echo Yii::app()->createUrl('site/download'); ?>" id="a">下载<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon1.png"></a></li>
         <li><a data-ajax="false" href="<?php echo Yii::app()->createUrl('site/copy'); ?>" id="b">复制<img src="<?php echo Yii::app()->baseUrl; ?>/Sites/images/function_icon2.png"></a></li>
