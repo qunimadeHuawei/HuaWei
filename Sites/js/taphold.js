@@ -39,6 +39,7 @@ $(document).on("pageinit",".allPage",function(){
 		$("#function ul li a#a").attr("href",a+"/"+aValue);
 		$("#function ul li a#b").attr("href",b+"/"+aValue);
 		$("#function ul li a#c").attr("href",c+"/"+aValue);
+		$("#function ul li a#d").attr("value",aValue);
 		$("#function ul li a#e").attr("href",e+"/"+aValue);
 		$("#footer").hide();
 		$('#function').slideDown();

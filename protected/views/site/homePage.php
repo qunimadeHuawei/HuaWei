@@ -88,7 +88,7 @@
       </div>
       <div data-role="content">
         <input type="text" name="new_name" id="chongmm" placeholder="请输入新名字"/>
-        <input type="hidden" name="file_id" value='' id='re' />
+        <input type="hidden" name="file_id" value='' id='d' />
       </div>
       <div data-role="footer"> 
         <div data-role="navbar">

@@ -1,53 +1,69 @@
-<?php
-/* @var $this SiteController */
-/* @var $model LoginForm */
-/* @var $form CActiveForm  */
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/Sites/css/reset.css">
+  <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/Sites/css/themes/header.min.css">
+  <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/Sites/css/themes/jquery.mobile.icons.min.css">
+<link rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/Sites/css/jquery.mobile.structure-1.4.3.min.css" />
+<link rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/Sites/css/themes/supplement.css">
+<script src="<?php echo Yii::app()->baseUrl; ?>/Sites/js/jquery.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+<script src="<?php echo Yii::app()->baseUrl; ?>/Sites/js/min_height.js"></script>
+<script src="<?php echo Yii::app()->baseUrl; ?>/Sites/js/taphold.js"></script>
+<script type="text/javascript">
+    function showFileName()
+      {
+        var file = document.getElementById("upload");
+        for(var i = 0, j = file.files.length; i < j; i++)
+            {
+               alert(file.files[i].name);
+                            };
+            };
+            </script>
+</head>
+<body>
 
-$this->pageTitle=Yii::app()->name . ' - Login';
-$this->breadcrumbs=array(
-	'Login',
-);
-?>
+<div data-role="page" id="logIn" class="allPage">
+  <div data-role="header" data-position="fixed" id="header">
+    <h1>账号登录</h1>
+    <a href="<?php echo Yii::app()->createUrl('site/register');?>" data-transition="slide" class="registered" data-transition="slideup" data-mini="true" data-inline="true" data-role="none" data-transition="slide">注册</a>
+  </div>
+<!--header ends here  -->
 
-<h1>Login</h1>
-
-<p>Please fill out the following form with your login credentials:</p>
-
-<div class="form">
+<!-- mainContent starts here  -->
+  <div data-role="content" id="mainContent">
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'login-form',
-	'enableClientValidation'=>true,
-	'clientOptions'=>array(
-		'validateOnSubmit'=>true,
-	),
+  'id'=>'login-form',
+  'enableClientValidation'=>true,
+  'clientOptions'=>array(
+    'validateOnSubmit'=>true,
+  ),
 )); ?>
-
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password'); ?>
-		<?php echo $form->error($model,'password'); ?>
-		<p class="hint">
-			Hint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>.
-		</p>
-	</div>
-
-	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Login'); ?>
-	</div>
-
+      <div data-role="fieldcontain">
+        <?php echo $form->error($model,'password',array('style'=>'color:red')); ?>
+        <label for="registered">账号</label>
+        <input type="text" name="LoginForm[username]" id="registered" placeholder="用户名/邮箱">
+        <br>
+        <label for="password">密码</label>
+        <input type="password" name="LoginForm[password]" id="paddword">
+      </div>
+      <input id="submit" type="submit" value="登录" class="login">
 <?php $this->endWidget(); ?>
-</div><!-- form -->
+  </div>
+<!--  mainContent ends here   -->
+
+</div> 
+
+
+<div id="register" class="allPage" data-role="page">
+  <div data-role="header" data-position="fixed" id="header">
+    <h1>注册账号</h1>
+    <a href="#" data-rel="back" class="registered" data-transition="slideup" data-mini="true" data-inline="true" data-role="none" data-transition="slide">返回</a>
+  </div>
+<!--header ends here  -->
+</div> 
+</body>
+</html>
